@@ -21,11 +21,13 @@ Activity and Sequence Detection Performance Measures: A package to evaluate acti
 Installation
 ------------
 .. code-block:: bash
+
     pip install .
 
 Usage
 -----
 .. code-block:: python
+
     import aqudem
 
     aqu_context = aqudem.Context("ground_truth.xes",
@@ -77,12 +79,13 @@ For requests that span multiple cases, the results are aggregated. The default a
 Classifications are specified in the docstrings of the public
 metric methods of aqudem.Context.
 
-Ðevelopment
+Development
 -----------
 
 To execute the code check, including tests, coverage, linting and type checking, run the following command
 
 .. code-block:: bash
+
     ./code-check.sh
 
 Credits
