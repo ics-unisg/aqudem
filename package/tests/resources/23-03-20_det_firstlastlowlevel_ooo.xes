@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<log xes.version="1849-2016" xes.features="nested-attributes" xmlns="http://www.xes-standard.org/">
+	<extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext" />
+	<extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext" />
+	<extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext" />
+	<string key="origin" value="csv" />
+	<trace>
+		<string key="concept:name" value="case1" />
+        <float key="sampling_freq" value="1.0"/>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:30:17.730000" />
+		</event>
+		<event>
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T11:08:53.470000" />
+		</event>
+		<event>
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T11:09:37.960000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T11:10:07.350000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T11:10:15.400000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:31:22" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:32:44.550000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:32:45.980000" />
+		</event>
+		<event>
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:38:37.900000" />
+		</event>
+		<event>
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:39:24.400000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:39:57.260000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:40:05.280000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:40:11.300000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:40:25.430000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:40:57.690000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:41:07.770000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:41:34.050000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:41:38.070000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:41:38.070000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:41:40.100000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:41:50.140000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:44:06.810000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:44:13.150000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:44:27.230000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:44:37.070000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:44:39.090000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:44:39.090000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:44:51.330000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:44:53.200000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:45:39.890000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:45:43.460000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:46:52.680000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:47:04.730000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:47:16.160000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:48:12.520000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:49:12.930000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:49:17.860000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:49:25.880000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:49:35.200000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:49:37.210000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:49:51.320000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:52:00.140000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:52:32.330000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:52:36.360000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:52:48.420000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:55:05.210000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:55:19.260000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:56:23.630000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:58:12.440000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:58:20.490000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:58:26.510000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:59:03.030000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:59:19.080000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T11:00:21.220000" />
+		</event>
+		<event>
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T11:00:50.660000" />
+		</event>
+		<event>
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T11:01:35.150000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T11:02:08.010000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T11:02:16.040000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T11:02:22.060000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T11:03:02.750000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T11:03:10.790000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T11:04:20.890000" />
+		</event>
+		<event>
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T11:04:50.070000" />
+		</event>
+		<event>
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T11:05:34.570000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T11:06:07.560000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:32:58.630000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:33:42.590000" />
+		</event>
+		<event>
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:34:30.620000" />
+		</event>
+		<event>
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:35:17" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:35:51.630000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T10:35:57.670000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T10:38:08.510000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T11:06:15.590000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T11:06:21.600000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T11:07:14.020000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T11:07:28.080000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-03-20T11:08:24.440000" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-03-20T11:10:21.430000" />
+		</event>
+	</trace>
+</log>
