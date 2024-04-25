@@ -4,11 +4,11 @@ on:
   pull_request:
     branches: [ main ]
     paths:
-      - 'aqudem/**'
+      - 'package/**'
   push:
     branches: [ main ]
     paths:
-      - 'aqudem/**'
+      - 'package/**'
 
 jobs:
   test:
@@ -23,30 +23,30 @@ jobs:
         python-version: '3.12'
     - name: Install dependencies
       run: |
-        cd aqudem
+        cd package
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install -r requirements_dev.txt
     - name: Run unit tests with pytest
       run: |
-        cd aqudem
+        cd package
         export PYTHONPATH=.
         pytest
 
     - name: Make sure coverage is high enough
       run: |
-        cd aqudem
+        cd package
         export PYTHONPATH=.
         coverage run --source=aqudem --branch -m pytest
         coverage report --fail-under=90
 
     - name: Lint with pylint
       run: |
-        cd aqudem
+        cd package
         pylint aqudem
         pylint --disable=protected-access,missing-function-docstring tests
 
     - name: Type checking with mypy
       run: |
-        cd aqudem
+        cd package
         mypy aqudem tests --strict
