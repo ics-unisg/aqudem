@@ -45,7 +45,7 @@ setup(
     packages=find_packages(include=['aqudem', 'aqudem.*']),
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/aaronkurz/aqudem',
+    url='https://github.com/ics-unisg/aqudem',
     version='0.1.0',
     zip_safe=False,
 )

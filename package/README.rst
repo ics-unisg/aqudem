@@ -14,9 +14,7 @@ AquDeM
 
 Activity and Sequence Detection Performance Measures: A package to evaluate activity detection results, including the sequence of events given multiple activity types.
 
-
-* Free software: TODO license
-* Documentation: https://aqudem.readthedocs.io. (not yet active)
+* Documentation: https://aqudem.readthedocs.io. (TODO: not yet active)
 
 Installation
 ------------
@@ -78,15 +76,6 @@ For requests that span multiple cases, the results are aggregated. The default a
 
 Classifications are specified in the docstrings of the public
 metric methods of aqudem.Context.
-
-Development
------------
-
-To execute the code check, including tests, coverage, linting and type checking, run the following command
-
-.. code-block:: bash
-
-    ./code-check.sh
 
 Credits
 -------
