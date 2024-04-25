@@ -1,0 +1,52 @@
+name: AquDeM Code Quality Check
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'aqudem/**'
+  push:
+    branches: [ main ]
+    paths:
+      - 'aqudem/**'
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+    - name: Install dependencies
+      run: |
+        cd aqudem
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install -r requirements_dev.txt
+    - name: Run unit tests with pytest
+      run: |
+        cd aqudem
+        export PYTHONPATH=.
+        pytest
+
+    - name: Make sure coverage is high enough
+      run: |
+        cd aqudem
+        export PYTHONPATH=.
+        coverage run --source=aqudem --branch -m pytest
+        coverage report --fail-under=90
+
+    - name: Lint with pylint
+      run: |
+        cd aqudem
+        pylint aqudem
+        pylint --disable=protected-access,missing-function-docstring tests
+
+    - name: Type checking with mypy
+      run: |
+        cd aqudem
+        mypy aqudem tests --strict

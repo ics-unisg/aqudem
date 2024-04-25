@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log xes.version="1.0" xmlns="http://www.xes-standard.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xes-standard.org/ xes.xsd">
+  <extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext"/>
+  <extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext"/>
+  <extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext"/>
+  <global scope="trace">
+    <string key="concept:name" value="UNKNOWN"/>
+  </global>
+  <global scope="event">
+    <string key="concept:name" value="UNKNOWN"/>
+    <string key="lifecycle:transition" value="UNKNOWN"/>
+    <date key="time:timestamp" value="1970-01-01T00:00:00.000+00:00"/>
+  </global>
+  <classifier name="Activity" keys="concept:name lifecycle:transition"/>
+  <trace>
+    <string key="concept:name" value="ExampleTrace"/>
+    <float key="sampling_freq" value="1.0"/>
+    <event>
+      <string key="concept:name" value="Activity A"/>
+      <string key="concept:instance" value="A-1"/>
+      <string key="lifecycle:transition" value="start"/>
+      <date key="time:timestamp" value="2024-02-15T08:00:00.000+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Activity A"/>
+      <string key="concept:instance" value="A-1"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2024-02-15T08:10:00.000+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Activity B"/>
+      <string key="concept:instance" value="B-1"/>
+      <string key="lifecycle:transition" value="start"/>
+      <date key="time:timestamp" value="2024-02-15T08:22:00.000+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Activity B"/>
+      <string key="concept:instance" value="B-1"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2024-02-15T08:31:00.000+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Activity A"/>
+      <string key="concept:instance" value="A-2"/>
+      <string key="lifecycle:transition" value="start"/>
+      <date key="time:timestamp" value="2024-02-15T08:34:00.000+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Activity A"/>
+      <string key="concept:instance" value="A-2"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2024-02-15T08:36:00.000+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Activity A"/>
+      <string key="concept:instance" value="A-3"/>
+      <string key="lifecycle:transition" value="start"/>
+      <date key="time:timestamp" value="2024-02-15T08:37:00.000+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Activity A"/>
+      <string key="concept:instance" value="A-3"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2024-02-15T08:43:00.000+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Activity C"/>
+      <string key="concept:instance" value="C-1"/>
+      <string key="lifecycle:transition" value="start"/>
+      <date key="time:timestamp" value="2024-02-15T08:52:00.000+00:00"/>
+    </event>
+    <event>
+      <string key="concept:instance" value="C-1"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2024-02-15T08:59:00.000+00:00"/>
+    </event>
+  </trace>
+</log>
