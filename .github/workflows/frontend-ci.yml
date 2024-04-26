@@ -31,5 +31,5 @@ jobs:
         pip install .
     - name: Lint with pylint
       run: |
-        cd process_stream_toolkit
+        cd frontend
         pylint aqudem_app.py
