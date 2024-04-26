@@ -29,7 +29,14 @@ jobs:
         pip install -r requirements_dev.txt
         cd ../package
         pip install .
+    - name: Run tests with pytest
+      run: |
+        cd frontend
+        export PYTHONPATH=.
+        pytest
     - name: Lint with pylint
       run: |
         cd frontend
         pylint aqudem_app.py
+        pylint --disable=missing-function-docstring tests
+

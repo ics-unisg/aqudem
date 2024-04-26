@@ -461,17 +461,21 @@ if not st.session_state.active_analysis and st.session_state.context is None:
                                   key="det_uploader",
                                   type=["xes"])
     if st.button("Start analysis"):
-        st.session_state.active_analysis = True
-        # temporarily store the uploaded files on disk
-        with NamedTemporaryFile(delete=False) as gt_f:  # Create temporary file
-            gt_f.write(gt_upload.getvalue())  # Save uploaded contents to file
-        with NamedTemporaryFile(delete=False) as det_f:  # Create temporary file
-            det_f.write(det_upload.getvalue())  # Save uploaded contents to file
-        # delete temporary file from filesystem
-        st.session_state.context = aqudem.Context(gt_f.name, det_f.name)
-        os.remove(gt_f.name)
-        os.remove(det_f.name)
-        st.rerun()
+        if gt_upload is not None and det_upload is not None:
+            st.session_state.active_analysis = True
+            # temporarily store the uploaded files on disk
+            with NamedTemporaryFile(delete=False) as gt_f:  # Create temporary file
+                gt_f.write(gt_upload.getvalue())  # Save uploaded contents to file
+            with NamedTemporaryFile(delete=False) as det_f:  # Create temporary file
+                det_f.write(det_upload.getvalue())  # Save uploaded contents to file
+            # delete temporary file from filesystem
+            st.session_state.context = aqudem.Context(gt_f.name, det_f.name)
+            os.remove(gt_f.name)
+            os.remove(det_f.name)
+            st.rerun()
+        else:
+            st.toast("Please upload both the ground truth and detected logs to start the analysis.",
+                     icon="⚠️")
 elif st.session_state.active_analysis and st.session_state.context is not None:
     interactive_tab, download_tab = st.tabs(["Interactive", "Download"])
     with interactive_tab:
