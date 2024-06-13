@@ -68,27 +68,26 @@ Ready to contribute? Here's how to set up `aqudem` for local development.
 
     $ pip install -r requirements.txt
 
-4. Create a branch for local development::
+4. To get the necessary developer tools, run::
+
+    $ pip install -r requirements-dev.txt
+
+5. Create a branch for local development::
 
     $ git checkout -b name-of-your-bugfix-or-feature
 
    Now you can make your changes locally.
 
-5. When you're done making changes, check that your changes pass several requirements::
+6. When you're done making changes, check that your changes pass several requirements::
 
     $ `./code-check.sh
-
-   To get the necessary tools to execute the checks, run::
-
-    $ pip install -r requirements-dev.txt
-
-6. Commit your changes and push your branch to GitHub::
+7. Commit your changes and push your branch to GitHub::
 
     $ git add .
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
 
-7. Submit a pull request through the GitHub website.
+8. Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
 -----------------------
@@ -108,6 +107,9 @@ Tips
 
 Deploying
 ---------
+
+
+TODO: to change
 
 A reminder for the maintainers on how to deploy.
 Make sure all your changes are committed (including an entry in HISTORY.rst).

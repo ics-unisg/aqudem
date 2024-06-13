@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/aaronkurz/aqudem
+    $ git clone git://github.com/ics-unisg/aqudem
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/aaronkurz/aqudem/tarball/master
+    $ curl -OJL https://github.com/ics-unisg/aqudem/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/aaronkurz/aqudem
-.. _tarball: https://github.com/aaronkurz/aqudem/tarball/master
+.. _Github repo: https://github.com/ics-unisg/aqudem
+.. _tarball: https://github.com/ics-unisg/aqudem/tarball/master

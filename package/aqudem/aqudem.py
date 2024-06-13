@@ -15,34 +15,33 @@ from .event_analysis_helper import (_event_analysis_by_activity_case, EventAnaly
 
 
 class Context:
-    """Class that offers main functionality of AquDeM."""
+    """Class that offers main functionality of AquDeM.
+
+    Both files are expected to be in the XES format, with special constraints:
+    * The log must have an attribute specifying the sampling frequency in hertz
+    (key: "sampling_freq") on the trace level (only the detected log).
+    * Must use the concept:name,
+    lifecycle:transition and time:timestamp standard extensions.
+    * Each activity instance must have an event with at least
+    the lifecycle transitions tart and complete.
+    * In one case, the same activity can only be executed once at a time.
+
+    An ACTIVITY_METRIC is a metric that is calculated for each activity type
+    in each case separately.
+    For requests that span multiple activities and/or cases, the results
+    are aggregated.
+    A SEQUENCE_METRIC is a metric that is calculated for each
+    case separately.
+    For requests that span multiple cases, the results are aggregated.
+
+    :param str ground_truth: The ground truth log file path.
+    :param str detected: The detected log file path.
+    :return: An aqudem context instance,
+    representing the comparison of two logs.
+    """
 
     def __init__(self, ground_truth: str, detected: str):
-        """Constructor of AquDeMContext.
-
-        Both files are expected to be in the XES format, with special constraints:
-        - The log must have an attribute specifying the sampling frequency in hertz
-            (key: "sampling_freq") on the trace level.
-        - Must use the concept:name, concept:instance,
-            lifecycle:transition and time:timestamp standard extensions.
-        - Each activity instance must have an event with at least
-            the lifecycle transitions tart and complete.
-        - In one case, the same activity can only be executed once at a time.
-
-        An ACTIVITY_METRIC is a metric that is calculated for each activity type
-        in each case separately.
-        For requests that span multiple activities and/or cases, the results
-        are aggregated.
-        A SEQUENCE_METRIC is a metric that is calculated for each
-        case separately.
-        For requests that span multiple cases, the results are aggregated.
-        Classifications are specified in the docstrings of the public
-        metric methods of aqudem.Context.
-        :param str ground_truth: The ground truth log file path.
-        :param str detected: The detected log file path.
-        :return: An instance of AquDeMContext.
-        :rtype: AquDeMContext
-        """
+        """Initialize the context with the ground truth and detected logs."""
         base_gt = sf.FrameHE.from_pandas(
             pm4py.read_xes(ground_truth).sort_values(by="time:timestamp"))
         base_det = sf.FrameHE.from_pandas(
@@ -74,7 +73,7 @@ class Context:
         """Extract all the available activity names from the XES logs.
 
         :return: A dictionary with "ground_truth" and "detected" keys, each
-            containing a list of activity names.
+        containing a list of activity names.
         """
         return {
             "ground_truth": list(set(self._ground_truth["concept:name"].values)),
@@ -86,7 +85,7 @@ class Context:
         """Extract all the available case IDs from the XES logs.
 
         :return: A dictionary with "ground_truth" and "detected" keys, each
-            containing a list of case IDs.
+        containing a list of case IDs.
         """
         return {
             "ground_truth": list(set(self._ground_truth["case:concept:name"].values)),
@@ -99,13 +98,14 @@ class Context:
                           case_id: str = "*") -> Tuple[float, float]:
         """Calculate the cross-correlation between the ground truth and detected logs.
 
-        ACTICITY_METRIC
+        ACTIVITY_METRIC
+
         :param activity_name: The name of the activity to calculate the cross-correlation for.
             If "*" is passed, the cross-correlation will be calculated and averaged for all
-             activities.
+            activities.
         :param case_id: The case ID to calculate the cross-correlation for.
             If "*" is passed, the cross-correlation will be calculated and averaged for all
-                case IDs.
+            case IDs.
         :return: Tuple; first element: cross-correlation value, between 0 and 1.
             second element: relative shift to achieve maximum cross correlation.
         """
@@ -127,13 +127,14 @@ class Context:
         """Calculate the 2SET metrics for a given activity. Absolute values.
 
         ACTIVITY_METRIC
-        With the possibility to average over activities and cases.
+
         Includes the absolute and rate metrics, for details see the
         TwoSet class documentation.
-        For more info on the metrics, see:
-        See J. A. Ward, P. Lukowicz, and H. W. Gellersen, “Performance metrics for
-            activity recognition,” ACM Trans. Intell. Syst. Technol., vol. 2, no. 1, pp. 1–23,
-            Jan. 2011, doi: 10.1145/1889681.1889687.; 4.1.2
+        For more info on the metrics, refer to the metrics overview and/or:
+        J. A. Ward, P. Lukowicz, and H. W. Gellersen, “Performance metrics for
+        activity recognition,” ACM Trans. Intell. Syst. Technol., vol. 2, no. 1, pp. 1–23,
+        Jan. 2011, doi: 10.1145/1889681.1889687.; 4.1.2
+
         :param activity_name: The name of the activity to calculate the two-set metrics for.
             If "*" is passed, the two-set metrics will be calculated
             and aggregated for all activities.
@@ -161,13 +162,14 @@ class Context:
         """Calculate the EA metrics.
 
         ACTIVITY_METRIC
-        With the possibility to average over activities and cases.
+
         Includes the absolute and rate metrics, for details see the
         EventAnalysis class documentation.
-        For more info on the metrics, see:
-        See J. A. Ward, P. Lukowicz, and H. W. Gellersen, “Performance metrics for
-            activity recognition,” ACM Trans. Intell. Syst. Technol., vol. 2, no. 1, pp. 1–23,
-            Jan. 2011, doi: 10.1145/1889681.1889687.; 4.2
+        For more info on the metrics, refer to the metrics overview and/or:
+        J. A. Ward, P. Lukowicz, and H. W. Gellersen, “Performance metrics for
+        activity recognition,” ACM Trans. Intell. Syst. Technol., vol. 2, no. 1, pp. 1–23,
+        Jan. 2011, doi: 10.1145/1889681.1889687.; 4.2
+
         :param activity_name: The name of the activity to calculate the event analysis metrics for.
             If "*" is passed, the metrics will be calculated
             and aggregated for all activities.
@@ -193,12 +195,14 @@ class Context:
         """Calculate the Damerau-Levenshtein distance between the ground truth and
             detected logs.
 
-        Calculates both the absolute distance and the normalized distance.
         SEQUENCE_METRIC
+
+        Calculates both the absolute distance and the normalized distance.
         Order of activities based on start timestamps.
+
         :param case_id: The case ID to calculate the Damerau-Levenshtein distance for.
             If "*" is passed, the Damerau-Levenshtein distance will be calculated and
-                averaged for all case IDs.
+            averaged for all case IDs.
         :return: The Damerau-Levenshtein distance; tuple.
             The first value in the tuple represents the (average) absolute distance.
             The second value in the tuple represents the (average) normalized distance.
@@ -211,9 +215,11 @@ class Context:
     def levenshtein_distance(self, case_id: str = "*") -> Tuple[Union[float, int], float]:
         """Calculate the Levenshtein distance between the ground truth and detected logs.
 
-        Calculates both the absolute distance and the normalized distance.
         SEQUENCE_METRIC
+
+        Calculates both the absolute distance and the normalized distance.
         Order of activities based on start timestamps.
+
         :param case_id: The case ID to calculate the Levenshtein distance for.
             If "*" is passed, the Levenshtein distance will be
             calculated and averaged for all case IDs.
