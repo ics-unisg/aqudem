@@ -80,7 +80,7 @@ Ready to contribute? Here's how to set up `aqudem` for local development.
 
 6. When you're done making changes, check that your changes pass several requirements::
 
-    $ `./code-check.sh
+    $ ./code-check.sh
 7. Commit your changes and push your branch to GitHub::
 
     $ git add .
