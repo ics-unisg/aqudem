@@ -5,7 +5,7 @@ from streamlit.testing.v1 import AppTest
 import aqudem
 
 CASE_METRICS = ["Damerau-Levenshtein", "Levenshtein",
-                "Damerau-Levenshtein norm", "Levenshtein norm"]
+                "Damerau-Levenshtein normalized", "Levenshtein normalized"]
 CASE_ACTIVITY_METRICS = ["Cross-correlation", "2SET metrics", "2SET rates",
                          "Event analysis", "Event analysis rates"]
 

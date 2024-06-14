@@ -185,21 +185,24 @@ def get_2set_metrics_content():
         st.dataframe(metric_res_2set, use_container_width=True)
         with st.expander("Explanation of acronyms"):
             st.markdown(
-                "These explain what 'happened to' the frames that are positive in the ground truth in the detected log:\n"
+                "These explain what 'happened to' the frames that are "
+                "positive in the ground truth in the detected log:\n"
                 "Number of...:\n"
                 "- tp: True positives\n"
                 "- d: Deletions\n"
                 "- f: Fragmentations\n"
                 "- ua: Underfills $\\alpha$\n"
                 "- uo: Underfills $\\omega$\n\n"
-                "These explain what 'happened to' the frames that are negative in the ground truth in the detected log:\n"
+                "These explain what 'happened to' the frames that are "
+                "negative in the ground truth in the detected log:\n"
                 "Number of...:\n"
                 "- tn: True negatives\n"
                 "- i: Insertions\n"
                 "- m: Mergings\n"
                 "- oa: Overfills $\\alpha$\n"
                 "- oo: Overfills $\\omega$\n\n"
-                "For more details, please see the [paper by Ward et al (2011)](https://doi.org/10.1145/1889681.1889687).")
+                "For more details, please see the [paper by Ward et al "
+                "(2011)](https://doi.org/10.1145/1889681.1889687).")
         metric_res_2set['activity-case'] = metric_res_2set['activity'].astype(str) + '-' + \
                                            metric_res_2set[
                                                'case'].astype(str)
@@ -243,21 +246,24 @@ def get_2set_rates_content():
         st.dataframe(metric_res_2set, use_container_width=True)
         with st.expander("Explanation of acronyms"):
             st.markdown(
-                "These explain what 'happened to' the frames that are positive in the ground truth in the detected log:\n"
+                "These explain what 'happened to' the frames that are positive "
+                "in the ground truth in the detected log:\n"
                 "Rate of...:\n"
                 "- tpr: True positives\n"
                 "- dr: Deletions\n"
                 "- fr: Fragmentations\n"
                 "- uar: Underfills $\\alpha$\n"
                 "- uor: Underfills $\\omega$\n\n"
-                "These explain what 'happened to' the frames that are negative in the ground truth in the detected log:\n"
+                "These explain what 'happened to' the frames that are "
+                "negative in the ground truth in the detected log:\n"
                 "Rate of...:\n"
                 "- tnr: True negatives\n"
                 "- ir: Insertions\n"
                 "- mr: Mergings\n"
                 "- oar: Overfills $\\alpha$\n"
                 "- oor: Overfills $\\omega$\n\n"
-                "For more details, please see the [paper by Ward et al (2011)](https://doi.org/10.1145/1889681.1889687).")
+                "For more details, please see the [paper by Ward et al "
+                "(2011)](https://doi.org/10.1145/1889681.1889687).")
         pie_chart_dict_p = {
             "category": [],
             "value": []
@@ -271,7 +277,8 @@ def get_2set_rates_content():
             color=alt.Color(field="category", type="nominal"),
         )
         st.write(
-            "How the positive ground truth frames were classified (averaged over your selected combinations/rows from above):")
+            "How the positive ground truth frames were classified "
+            "(averaged over your selected combinations/rows from above):")
         st.altair_chart(chart_p, use_container_width=True)
         pie_chart_dict_n = {
             "category": [],
@@ -286,7 +293,8 @@ def get_2set_rates_content():
             color=alt.Color(field="category", type="nominal"),
         )
         st.write(
-            "How the negative ground truth frames were classified (averaged over your selected combinations/rows from above):")
+            "How the negative ground truth frames were classified "
+            "(averaged over your selected combinations/rows from above):")
         st.altair_chart(chart_n, use_container_width=True)
 
 
@@ -330,7 +338,8 @@ def get_event_analysis_metrics_content():
                         "- fmd: Fragmentations and mergings\n"
                         "- fd: Fragmentations\n"
                         "- id: Insertions\n\n"
-                        "For more details, please see the [paper by Ward et al (2011)](https://doi.org/10.1145/1889681.1889687).")
+                        "For more details, please see the "
+                        "[paper by Ward et al (2011)](https://doi.org/10.1145/1889681.1889687).")
         metric_res['activity-case'] = metric_res['activity'].astype(str) + '-' + metric_res[
             'case'].astype(str)
         metric_choices = ["d", "f", "fm", "m", "c", "md", "fmd", "fd", "id"]
@@ -387,7 +396,8 @@ def get_event_analysis_rates_content():
                         "- fdr: Fragmentations\n"
                         "- idr: Insertions\n"
                         "- cr_det: Correct detections\n\n"
-                        "For more details, please see the [paper by Ward et al (2011)](https://doi.org/10.1145/1889681.1889687).")
+                        "For more details, please see the "
+                        "[paper by Ward et al (2011)](https://doi.org/10.1145/1889681.1889687).")
         pie_chart_dict_p = {
             "category": [],
             "value": []
@@ -401,7 +411,8 @@ def get_event_analysis_rates_content():
             color=alt.Color(field="category", type="nominal"),
         )
         st.write(
-            "How the positive ground truth events were classified (averaged over your selected combinations/rows from above):")
+            "How the positive ground truth events were classified "
+            "(averaged over your selected combinations/rows from above):")
         st.altair_chart(chart_p, use_container_width=True)
         pie_chart_dict_n = {
             "category": [],
@@ -416,7 +427,8 @@ def get_event_analysis_rates_content():
             color=alt.Color(field="category", type="nominal"),
         )
         st.write(
-            "How the negative ground truth events were classified (averaged over your selected combinations/rows from above):")
+            "How the negative ground truth events were classified "
+            "(averaged over your selected combinations/rows from above):")
         st.altair_chart(chart_n, use_container_width=True)
 
 
@@ -445,7 +457,8 @@ if not st.session_state.active_analysis and st.session_state.context is None:
             os.remove(det_f.name)
             st.rerun()
         else:
-            st.toast("Please upload both the ground truth and detected logs to start the analysis.",
+            st.toast("Please upload both the ground truth "
+                     "and detected logs to start the analysis.",
                      icon="⚠️")
 elif st.session_state.active_analysis and st.session_state.context is not None:
     interactive_tab, download_tab, about_tab = st.tabs(["Interactive", "Download", "About"])
@@ -456,7 +469,8 @@ elif st.session_state.active_analysis and st.session_state.context is not None:
         metric_choice = st.selectbox("Which metric are you interested in?",
                                      options=metrics,
                                      help=("For more information on the metrics, please "
-                                           "refer to [the metrics overview in the documentation](https://sdgs.un.org/goals)"))
+                                           "refer to [the metrics overview in "
+                                           "the documentation](https://sdgs.un.org/goals)"))
         if metric_choice == "Cross-correlation":
             get_cross_correlation_content()
         elif metric_choice == "Damerau-Levenshtein":
