@@ -1,4 +1,4 @@
-name: AquDeM Code Quality Check
+name: AquDeM Package Code Quality Check
 
 on:
   pull_request:

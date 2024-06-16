@@ -13,18 +13,23 @@ from .utils import (_case_activity_level_metric_pre_check,
 # pylint: disable=too-many-instance-attributes
 @dataclass(frozen=True)
 class TwoSet:
-    """Data class to hold the absolute 2SET metrics.
+    """Data class to hold the 2SET metrics.
 
-    tp: int, True Positives
-    tn: int, True Negatives
-    d: int, Deletions
-    f: int, Fragmentations
-    ua: int, Underfullings (at the start)
-    uo: int, Underfullings (at the end)
-    i: int, Insertions
-    m: int, Merges
-    oa: int, Overfullings (at the start)
-    oo: int, Overfullings (at the end)
+    How many of the det frames can be seen as tp, tn, d, f, ua, uo, i, m, oa, oo.
+    If result of aggregated request, the values represent the average number of frames
+    over the relevant case-activity pairs.
+    Relative metrics are available as properties.
+
+    :param tp: True Positives
+    :param tn: True Negatives
+    :param d: Deletions
+    :param f: Fragmentations
+    :param ua: Underfullings (at the start)
+    :param uo: Underfullings (at the end)
+    :param i: Insertions
+    :param m: Merges
+    :param oa: Overfullings (at the start)
+    :param oo: Overfullings (at the end)
     """
     tp: Union[int, float]
     tn: Union[int, float]

@@ -17,20 +17,22 @@ from .ward_helper import _generate_segment_scores
 class EventAnalysis:
     """Data class to hold the EA metrics.
 
+    Regarding the ground truth events: d, f, fm, m.
+    Regarding both the ground truth and detected events: c.
+    Regarding the (d)etected events: md, fmd, fd, id.
     If result of aggregated request, the values represent the average number of events
-    over the relevant log-activity pairs.
-    Regarding the ground truth events:
-    d: int, Deletions
-    f: int, Fragmentations
-    fm: int, Fragmentation and merge
-    m: int, Merges
-    Regarding both the ground truth and detected events:
-    c: int, Correct
-    Regarding the (d)etected events:
-    md: int, Merges
-    fmd: int, Fragmentation and merge
-    fd: int, Fragmentations
-    id: int, Insertions
+    over the relevant case-activity pairs.
+    Relative metrics are available as properties.
+
+    :param d: Deletions
+    :param f: Fragmentations
+    :param fm: Fragmentation and merge
+    :param m: Merges
+    :param c: Correct
+    :param md: Merges
+    :param fmd: Fragmentation and merge
+    :param fd: Fragmentations
+    :param id: Insertions
     """
     d: Union[int, float]
     f: Union[int, float]

@@ -10,4 +10,6 @@ Development Lead
 Contributors
 ------------
 
-None yet. Why not be the first?
+* Ronny Seiger <ronny.seiger@unisg.ch>
+* Marco Franceschetti <marco.franceschetti@unisg.ch>
+* Barbara Weber <barbara.weber@unisg.ch>

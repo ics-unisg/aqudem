@@ -19,7 +19,7 @@ def test_start_analysis_button_exists(at: AppTest) -> None:
 
 def test_correct_text_elements_exist(at: AppTest) -> None:
     assert at.header.len == 1
-    assert at.header[0].value == "AquDeM"
+    assert "AquDeM" in at.header[0].value
     assert any("upload the ground truth and detected logs"
                in md_text for md_text
                in at.markdown.values)

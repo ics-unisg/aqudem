@@ -21,23 +21,34 @@ if "context" not in st.session_state:
 
 # --------- HELPER FUNCTIONS ---------
 
-def get_cross_correlation_content():
-    """Get the content for the cross-correlation metric."""
+def get_activity_choices():
+    """Get the activity choices for the metrics."""
     all_activities: List[str] = list(
         set(st.session_state.context.activity_names["ground_truth"]
             + st.session_state.context.activity_names["detected"]))
-    all_cases: List[str] = list(
-        set(st.session_state.context.case_ids["ground_truth"]
-            + st.session_state.context.case_ids["detected"]))
-
-    activity_choices = st.multiselect(
+    return st.multiselect(
         "Which activities are you interested in?",
         options=all_activities,
         help="Leave empty to average over all activities")
-    case_choices = st.multiselect(
+
+
+def get_case_choices():
+    """Get the case choices for the metrics."""
+    all_cases: List[str] = list(
+        set(st.session_state.context.case_ids["ground_truth"]
+            + st.session_state.context.case_ids["detected"]))
+    return st.multiselect(
         "Which cases are you interested in?",
         options=all_cases,
         help="Leave empty to average over all cases")
+
+
+# --------- METRIC CONTENT FUNCTIONS ---------
+
+def get_cross_correlation_content():
+    """Get the content for the cross-correlation metric."""
+    case_choices = get_case_choices()
+    activity_choices = get_activity_choices()
     metric_res_list = []
     for activity in activity_choices if len(activity_choices) > 0 else ["*"]:
         for case in case_choices if len(case_choices) > 0 else ["*"]:
@@ -48,15 +59,11 @@ def get_cross_correlation_content():
                     "cross-correlation": st.session_state.context.cross_correlation(activity, case)[
                         0]
                 })
-    # check whether the metric_res dataframe is not empty
     metric_res = pd.DataFrame(metric_res_list)
     if not metric_res.empty:
         st.dataframe(metric_res, use_container_width=True)
         metric_res['activity-case'] = metric_res['activity'].astype(str) + '-' + metric_res[
             'case'].astype(str)
-        # visualize using altair, X-axis/grouping is the activity-case
-        # combination of the corresponding row
-        # Y-axis is the cross-correlation value
         chart = alt.Chart(metric_res).mark_bar().encode(
             y=alt.Y("cross-correlation:Q", title="Cross-correlation"),
             x=alt.X("activity-case:N", title="Activity-Case")
@@ -68,24 +75,16 @@ def get_cross_correlation_content():
 
 def get_damerau_levenshtein_norm_content():
     """Get the content for the normed Damerau-Levenshtein metric."""
-    all_cases: List[str] = list(
-        set(st.session_state.context.case_ids["ground_truth"]
-            + st.session_state.context.case_ids["detected"]))
-    case_choices_dl = st.multiselect(
-        "Which cases are you interested in?",
-        options=all_cases,
-        help="Leave empty to average over all cases")
+    case_choices_dl = get_case_choices()
     metric_res_list_dl = []
     for case in case_choices_dl if len(case_choices_dl) > 0 else ["*"]:
         metric_res_list_dl.append({
             "case": case,
             "damerau-levenshtein": st.session_state.context.damerau_levenshtein_distance(case)[1]
         })
-    # check whether the metric_res dataframe is not empty
     metric_res_dl = pd.DataFrame(metric_res_list_dl)
     if not metric_res_dl.empty:
         st.dataframe(metric_res_dl, use_container_width=True)
-        # visualize using altair
         chart_dl = alt.Chart(metric_res_dl).mark_bar().encode(
             y=alt.Y("damerau-levenshtein:Q", title="Damerau-Levenshtein norm"),
             x=alt.X("case:N", title="Case")
@@ -97,24 +96,16 @@ def get_damerau_levenshtein_norm_content():
 
 def get_damerau_levenshtein_content():
     """Get the content for the Damerau-Levenshtein metric."""
-    all_cases: List[str] = list(
-        set(st.session_state.context.case_ids["ground_truth"]
-            + st.session_state.context.case_ids["detected"]))
-    case_choices_dl = st.multiselect(
-        "Which cases are you interested in?",
-        options=all_cases,
-        help="Leave empty to average over all cases")
+    case_choices_dl = get_case_choices()
     metric_res_list_dl = []
     for case in case_choices_dl if len(case_choices_dl) > 0 else ["*"]:
         metric_res_list_dl.append({
             "case": case,
             "damerau-levenshtein": st.session_state.context.damerau_levenshtein_distance(case)[0]
         })
-    # check whether the metric_res dataframe is not empty
     metric_res_dl = pd.DataFrame(metric_res_list_dl)
     if not metric_res_dl.empty:
         st.dataframe(metric_res_dl, use_container_width=True)
-        # visualize using altair
         chart_dl = alt.Chart(metric_res_dl).mark_bar().encode(
             y=alt.Y("damerau-levenshtein:Q", title="Damerau-Levenshtein distance"),
             x=alt.X("case:N", title="Case")
@@ -126,24 +117,16 @@ def get_damerau_levenshtein_content():
 
 def get_levenshtein_norm_content():
     """Get the content for the normed Levenshtein metric."""
-    all_cases: List[str] = list(
-        set(st.session_state.context.case_ids["ground_truth"]
-            + st.session_state.context.case_ids["detected"]))
-    case_choices_l = st.multiselect(
-        "Which cases are you interested in?",
-        options=all_cases,
-        help="Leave empty to average over all cases")
+    case_choices_l = get_case_choices()
     metric_res_list_l = []
     for case in case_choices_l if len(case_choices_l) > 0 else ["*"]:
         metric_res_list_l.append({
             "case": case,
             "levenshtein": st.session_state.context.levenshtein_distance(case)[1]
         })
-    # check whether the metric_res dataframe is not empty
     metric_res_l = pd.DataFrame(metric_res_list_l)
     if not metric_res_l.empty:
         st.dataframe(metric_res_l, use_container_width=True)
-        # visualize using altair
         chart_l = alt.Chart(metric_res_l).mark_bar().encode(
             y=alt.Y("levenshtein:Q", title="Levenshtein norm"),
             x=alt.X("case:N", title="Case")
@@ -155,24 +138,16 @@ def get_levenshtein_norm_content():
 
 def get_levenshtein_content():
     """Get the content for the Levenshtein metric."""
-    all_cases: List[str] = list(
-        set(st.session_state.context.case_ids["ground_truth"]
-            + st.session_state.context.case_ids["detected"]))
-    case_choices_l = st.multiselect(
-        "Which cases are you interested in?",
-        options=all_cases,
-        help="Leave empty to average over all cases")
+    case_choices_l = get_case_choices()
     metric_res_list_l = []
     for case in case_choices_l if len(case_choices_l) > 0 else ["*"]:
         metric_res_list_l.append({
             "case": case,
             "levenshtein": st.session_state.context.levenshtein_distance(case)[0]
         })
-    # check whether the metric_res dataframe is not empty
     metric_res_l = pd.DataFrame(metric_res_list_l)
     if not metric_res_l.empty:
         st.dataframe(metric_res_l, use_container_width=True)
-        # visualize using altair
         chart_l = alt.Chart(metric_res_l).mark_bar().encode(
             y=alt.Y("levenshtein:Q", title="Levenshtein distance"),
             x=alt.X("case:N", title="Case")
@@ -184,21 +159,8 @@ def get_levenshtein_content():
 
 def get_2set_metrics_content():
     """Get the content for the 2SET metrics."""
-    all_activities: List[str] = list(
-        set(st.session_state.context.activity_names["ground_truth"]
-            + st.session_state.context.activity_names["detected"]))
-    all_cases: List[str] = list(
-        set(st.session_state.context.case_ids["ground_truth"]
-            + st.session_state.context.case_ids["detected"]))
-
-    activity_choices_2set = st.multiselect(
-        "Which activities are you interested in?",
-        options=all_activities,
-        help="Leave empty to average over all activities")
-    case_choices_2set = st.multiselect(
-        "Which cases are you interested in?",
-        options=all_cases,
-        help="Leave empty to average over all cases")
+    case_choices_2set = get_case_choices()
+    activity_choices_2set = get_activity_choices()
     metric_res_list_2set = []
     for activity in activity_choices_2set if len(activity_choices_2set) > 0 else ["*"]:
         for case in case_choices_2set if len(case_choices_2set) > 0 else ["*"]:
@@ -207,10 +169,8 @@ def get_2set_metrics_content():
                 "case": case,
                 "2SET": st.session_state.context.two_set(activity, case)
             })
-    # check whether the metric_res dataframe is not empty
     metric_res_2set = pd.DataFrame(metric_res_list_2set)
     if not metric_res_2set.empty:
-        # create new columns for each of the metrics
         metric_res_2set["tp"] = metric_res_2set["2SET"].apply(lambda x: x.tp)
         metric_res_2set["tn"] = metric_res_2set["2SET"].apply(lambda x: x.tn)
         metric_res_2set["d"] = metric_res_2set["2SET"].apply(lambda x: x.d)
@@ -223,16 +183,32 @@ def get_2set_metrics_content():
         metric_res_2set["oo"] = metric_res_2set["2SET"].apply(lambda x: x.oo)
         metric_res_2set.drop(columns=["2SET"], inplace=True)
         st.dataframe(metric_res_2set, use_container_width=True)
+        with st.expander("Explanation of acronyms"):
+            st.markdown(
+                "These explain what 'happened to' the frames that are "
+                "positive in the ground truth in the detected log:\n"
+                "Number of...:\n"
+                "- tp: True positives\n"
+                "- d: Deletions\n"
+                "- f: Fragmentations\n"
+                "- ua: Underfills $\\alpha$\n"
+                "- uo: Underfills $\\omega$\n\n"
+                "These explain what 'happened to' the frames that are "
+                "negative in the ground truth in the detected log:\n"
+                "Number of...:\n"
+                "- tn: True negatives\n"
+                "- i: Insertions\n"
+                "- m: Mergings\n"
+                "- oa: Overfills $\\alpha$\n"
+                "- oo: Overfills $\\omega$\n\n"
+                "For more details, please see the [paper by Ward et al "
+                "(2011)](https://doi.org/10.1145/1889681.1889687).")
         metric_res_2set['activity-case'] = metric_res_2set['activity'].astype(str) + '-' + \
                                            metric_res_2set[
                                                'case'].astype(str)
-        # allow user to choose a certain metric to visualize and compare among a certain group
         metric_choices = ["tp", "tn", "d", "f", "ua", "uo", "i", "m", "oa", "oo"]
         metric_choice_2set = st.selectbox("Which 2SET metric do you want to visualize?",
                                           options=metric_choices)
-        # visualize using altair, where the x-axis is the activity
-        # and case combination of the row where the metric is
-        # the y-axis is the value of the chosen metric
         chart_2set = alt.Chart(metric_res_2set).mark_bar().encode(
             y=alt.Y(f"{metric_choice_2set}:Q", title=metric_choice_2set),
             x=alt.X("activity-case:N", title="Activity-Case")
@@ -244,21 +220,8 @@ def get_2set_metrics_content():
 
 def get_2set_rates_content():
     """Get the content for the 2SET rates."""
-    all_activities: List[str] = list(
-        set(st.session_state.context.activity_names["ground_truth"]
-            + st.session_state.context.activity_names["detected"]))
-    all_cases: List[str] = list(
-        set(st.session_state.context.case_ids["ground_truth"]
-            + st.session_state.context.case_ids["detected"]))
-
-    activity_choices_2set = st.multiselect(
-        "Which activities are you interested in?",
-        options=all_activities,
-        help="Leave empty to average over all activities")
-    case_choices_2set = st.multiselect(
-        "Which cases are you interested in?",
-        options=all_cases,
-        help="Leave empty to average over all cases")
+    case_choices_2set = get_case_choices()
+    activity_choices_2set = get_activity_choices()
     metric_res_list_2set = []
     for activity in activity_choices_2set if len(activity_choices_2set) > 0 else ["*"]:
         for case in case_choices_2set if len(case_choices_2set) > 0 else ["*"]:
@@ -267,10 +230,8 @@ def get_2set_rates_content():
                 "case": case,
                 "2SET": st.session_state.context.two_set(activity, case)
             })
-    # check whether the metric_res dataframe is not empty
     metric_res_2set = pd.DataFrame(metric_res_list_2set)
     if not metric_res_2set.empty:
-        # create new columns for each of the metrics, and also the hidden metric fpr
         metric_res_2set["tpr"] = metric_res_2set["2SET"].apply(lambda x: x.tpr)
         metric_res_2set["tnr"] = metric_res_2set["2SET"].apply(lambda x: x.tnr)
         metric_res_2set["dr"] = metric_res_2set["2SET"].apply(lambda x: x.dr)
@@ -283,7 +244,26 @@ def get_2set_rates_content():
         metric_res_2set["oor"] = metric_res_2set["2SET"].apply(lambda x: x.oor)
         metric_res_2set.drop(columns=["2SET"], inplace=True)
         st.dataframe(metric_res_2set, use_container_width=True)
-        # create new df with category being the metric name and value being average of the metric
+        with st.expander("Explanation of acronyms"):
+            st.markdown(
+                "These explain what 'happened to' the frames that are positive "
+                "in the ground truth in the detected log:\n"
+                "Rate of...:\n"
+                "- tpr: True positives\n"
+                "- dr: Deletions\n"
+                "- fr: Fragmentations\n"
+                "- uar: Underfills $\\alpha$\n"
+                "- uor: Underfills $\\omega$\n\n"
+                "These explain what 'happened to' the frames that are "
+                "negative in the ground truth in the detected log:\n"
+                "Rate of...:\n"
+                "- tnr: True negatives\n"
+                "- ir: Insertions\n"
+                "- mr: Mergings\n"
+                "- oar: Overfills $\\alpha$\n"
+                "- oor: Overfills $\\omega$\n\n"
+                "For more details, please see the [paper by Ward et al "
+                "(2011)](https://doi.org/10.1145/1889681.1889687).")
         pie_chart_dict_p = {
             "category": [],
             "value": []
@@ -296,7 +276,9 @@ def get_2set_rates_content():
             theta=alt.Theta(field="value", type="quantitative"),
             color=alt.Color(field="category", type="nominal"),
         )
-        st.write("Positive gt frame rates, averaged over all rows from above:")
+        st.write(
+            "How the positive ground truth frames were classified "
+            "(averaged over your selected combinations/rows from above):")
         st.altair_chart(chart_p, use_container_width=True)
         pie_chart_dict_n = {
             "category": [],
@@ -310,27 +292,16 @@ def get_2set_rates_content():
             theta=alt.Theta(field="value", type="quantitative"),
             color=alt.Color(field="category", type="nominal"),
         )
-        st.write("Negative gt frame rates, averaged over all rows from above:")
+        st.write(
+            "How the negative ground truth frames were classified "
+            "(averaged over your selected combinations/rows from above):")
         st.altair_chart(chart_n, use_container_width=True)
 
 
 def get_event_analysis_metrics_content():
     """Get the content for the event analysis metrics."""
-    all_activities: List[str] = list(
-        set(st.session_state.context.activity_names["ground_truth"]
-            + st.session_state.context.activity_names["detected"]))
-    all_cases: List[str] = list(
-        set(st.session_state.context.case_ids["ground_truth"]
-            + st.session_state.context.case_ids["detected"]))
-
-    activity_choices = st.multiselect(
-        "Which activities are you interested in?",
-        options=all_activities,
-        help="Leave empty to average over all activities")
-    case_choices = st.multiselect(
-        "Which cases are you interested in?",
-        options=all_cases,
-        help="Leave empty to average over all cases")
+    case_choices = get_case_choices()
+    activity_choices = get_activity_choices()
     metric_res_list = []
     for activity in activity_choices if len(activity_choices) > 0 else ["*"]:
         for case in case_choices if len(case_choices) > 0 else ["*"]:
@@ -340,10 +311,8 @@ def get_event_analysis_metrics_content():
                     "case": case,
                     "event-analysis": st.session_state.context.event_analysis(activity, case)
                 })
-    # check whether the metric_res dataframe is not empty
     metric_res = pd.DataFrame(metric_res_list)
     if not metric_res.empty:
-        # into separate columns
         metric_res["d"] = metric_res["event-analysis"].apply(lambda x: x.d)
         metric_res["f"] = metric_res["event-analysis"].apply(lambda x: x.f)
         metric_res["fm"] = metric_res["event-analysis"].apply(lambda x: x.fm)
@@ -355,15 +324,27 @@ def get_event_analysis_metrics_content():
         metric_res["id"] = metric_res["event-analysis"].apply(lambda x: x.id)
         metric_res.drop(columns=["event-analysis"], inplace=True)
         st.dataframe(metric_res, use_container_width=True)
+        with st.expander("Explanation of acronyms"):
+            st.markdown("These explain what 'happened to' the events from the ground truth :\n"
+                        "Number of...:\n"
+                        "- d: Deletions\n"
+                        "- f: Fragmentations\n"
+                        "- fm: Fragmentatations and mergings\n"
+                        "- m: Mergings\n"
+                        "- c: Correct detections\n"
+                        "These explain/classify the events that have been detected:\n"
+                        "Number of...:\n"
+                        "- md: Mergings\n"
+                        "- fmd: Fragmentations and mergings\n"
+                        "- fd: Fragmentations\n"
+                        "- id: Insertions\n\n"
+                        "For more details, please see the "
+                        "[paper by Ward et al (2011)](https://doi.org/10.1145/1889681.1889687).")
         metric_res['activity-case'] = metric_res['activity'].astype(str) + '-' + metric_res[
             'case'].astype(str)
-        # allow user to choose a certain metric to visualize and compare among a certain group
         metric_choices = ["d", "f", "fm", "m", "c", "md", "fmd", "fd", "id"]
         metric_choice_event = st.selectbox("Which event analysis metric do you want to visualize?",
                                            options=metric_choices)
-        # visualize using altair, where the x-axis is the activity
-        # and case combination of the row where the metric is
-        # the y-axis is the value of the chosen metric
         chart_event = alt.Chart(metric_res).mark_bar().encode(
             y=alt.Y(f"{metric_choice_event}:Q", title=metric_choice_event),
             x=alt.X("activity-case:N", title="Activity-Case")
@@ -375,21 +356,8 @@ def get_event_analysis_metrics_content():
 
 def get_event_analysis_rates_content():
     """Get the content for the event analysis rates."""
-    all_activities: List[str] = list(
-        set(st.session_state.context.activity_names["ground_truth"]
-            + st.session_state.context.activity_names["detected"]))
-    all_cases: List[str] = list(
-        set(st.session_state.context.case_ids["ground_truth"]
-            + st.session_state.context.case_ids["detected"]))
-
-    activity_choices = st.multiselect(
-        "Which activities are you interested in?",
-        options=all_activities,
-        help="Leave empty to average over all activities")
-    case_choices = st.multiselect(
-        "Which cases are you interested in?",
-        options=all_cases,
-        help="Leave empty to average over all cases")
+    case_choices = get_case_choices()
+    activity_choices = get_activity_choices()
     metric_res_list = []
     for activity in activity_choices if len(activity_choices) > 0 else ["*"]:
         for case in case_choices if len(case_choices) > 0 else ["*"]:
@@ -399,10 +367,8 @@ def get_event_analysis_rates_content():
                     "case": case,
                     "event-analysis": st.session_state.context.event_analysis(activity, case)
                 })
-    # check whether the metric_res dataframe is not empty
     metric_res = pd.DataFrame(metric_res_list)
     if not metric_res.empty:
-        # into separate columns
         metric_res["dr"] = metric_res["event-analysis"].apply(lambda x: x.dr)
         metric_res["fr"] = metric_res["event-analysis"].apply(lambda x: x.fr)
         metric_res["fmr"] = metric_res["event-analysis"].apply(lambda x: x.fmr)
@@ -415,7 +381,23 @@ def get_event_analysis_rates_content():
         metric_res["cr_det"] = metric_res["event-analysis"].apply(lambda x: x.cr_det)
         metric_res.drop(columns=["event-analysis"], inplace=True)
         st.dataframe(metric_res, use_container_width=True)
-        # create new df with category being the metric name and value being average of the metric
+        with st.expander("Explanation of acronyms"):
+            st.markdown("These explain what 'happened to' the events from the ground truth :\n"
+                        "Rate of...:\n"
+                        "- dr: Deletions\n"
+                        "- fr: Fragmentations\n"
+                        "- fmr: Fragmentatations and mergings\n"
+                        "- mr: Mergings\n"
+                        "- cr_gt: Correct detections\n"
+                        "These explain/classify the events that have been detected:\n"
+                        "Rate of...:\n"
+                        "- mdr: Mergings\n"
+                        "- fmdr: Fragmentations and mergings\n"
+                        "- fdr: Fragmentations\n"
+                        "- idr: Insertions\n"
+                        "- cr_det: Correct detections\n\n"
+                        "For more details, please see the "
+                        "[paper by Ward et al (2011)](https://doi.org/10.1145/1889681.1889687).")
         pie_chart_dict_p = {
             "category": [],
             "value": []
@@ -428,7 +410,9 @@ def get_event_analysis_rates_content():
             theta=alt.Theta(field="value", type="quantitative"),
             color=alt.Color(field="category", type="nominal"),
         )
-        st.write("Positive event rates, averaged over all rows from above:")
+        st.write(
+            "How the positive ground truth events were classified "
+            "(averaged over your selected combinations/rows from above):")
         st.altair_chart(chart_p, use_container_width=True)
         pie_chart_dict_n = {
             "category": [],
@@ -442,16 +426,15 @@ def get_event_analysis_rates_content():
             theta=alt.Theta(field="value", type="quantitative"),
             color=alt.Color(field="category", type="nominal"),
         )
-        st.write("Negative event rates, averaged over all rows from above:")
+        st.write(
+            "How the negative ground truth events were classified "
+            "(averaged over your selected combinations/rows from above):")
         st.altair_chart(chart_n, use_container_width=True)
 
 
 # --------- MAIN FLOW ---------
 
-st.header("AquDeM")
-st.write("Interactive, visual evaluation of activity detection results.")
-st.divider()
-
+st.header("AquDeM 📊")
 if not st.session_state.active_analysis and st.session_state.context is None:
     st.write("Please upload the ground truth and detected logs to start the analysis.")
     gt_upload = st.file_uploader("Upload ground truth log",
@@ -468,31 +451,35 @@ if not st.session_state.active_analysis and st.session_state.context is None:
                 gt_f.write(gt_upload.getvalue())  # Save uploaded contents to file
             with NamedTemporaryFile(delete=False) as det_f:  # Create temporary file
                 det_f.write(det_upload.getvalue())  # Save uploaded contents to file
-            # delete temporary file from filesystem
             st.session_state.context = aqudem.Context(gt_f.name, det_f.name)
+            # delete temporary file from filesystem
             os.remove(gt_f.name)
             os.remove(det_f.name)
             st.rerun()
         else:
-            st.toast("Please upload both the ground truth and detected logs to start the analysis.",
+            st.toast("Please upload both the ground truth "
+                     "and detected logs to start the analysis.",
                      icon="⚠️")
 elif st.session_state.active_analysis and st.session_state.context is not None:
-    interactive_tab, download_tab = st.tabs(["Interactive", "Download"])
+    interactive_tab, download_tab, about_tab = st.tabs(["Interactive", "Download", "About"])
     with interactive_tab:
         metrics = ["Cross-correlation", "Damerau-Levenshtein", "Levenshtein",
-                   "Damerau-Levenshtein norm", "Levenshtein norm",
+                   "Damerau-Levenshtein normalized", "Levenshtein normalized",
                    "2SET metrics", "2SET rates", "Event analysis", "Event analysis rates"]
         metric_choice = st.selectbox("Which metric are you interested in?",
-                                     options=metrics)
+                                     options=metrics,
+                                     help=("For more information on the metrics, please "
+                                           "refer to [the metrics overview in "
+                                           "the documentation](https://sdgs.un.org/goals)"))
         if metric_choice == "Cross-correlation":
             get_cross_correlation_content()
         elif metric_choice == "Damerau-Levenshtein":
             get_damerau_levenshtein_content()
         elif metric_choice == "Levenshtein":
             get_levenshtein_content()
-        elif metric_choice == "Damerau-Levenshtein norm":
+        elif metric_choice == "Damerau-Levenshtein normalized":
             get_damerau_levenshtein_norm_content()
-        elif metric_choice == "Levenshtein norm":
+        elif metric_choice == "Levenshtein normalized":
             get_levenshtein_norm_content()
         elif metric_choice == "2SET metrics":
             get_2set_metrics_content()
@@ -504,7 +491,7 @@ elif st.session_state.active_analysis and st.session_state.context is not None:
             get_event_analysis_rates_content()
     with download_tab:
         st.write("AquDeM offers the possibility to download the results of the analysis "
-                 "of the overall log in"
+                 "of the overall log in "
                  "a structured format. This allows for aggregation and further analysis.")
         st.write("Please specify the tags you want to include in the download, to help"
                  " with the analysis.")
@@ -533,11 +520,16 @@ elif st.session_state.active_analysis and st.session_state.context is not None:
         dict_with_cached_properties_eventanalysis.update(eventanalysis_obj.__dict__)
         download_dict["event-analysis"] = dict_with_cached_properties_eventanalysis
         download_dict["damerau-levenshtein"] = \
-        st.session_state.context.damerau_levenshtein_distance()[0]
+            st.session_state.context.damerau_levenshtein_distance()[0]
         download_dict["damerau-levenshtein-norm"] = \
-        st.session_state.context.damerau_levenshtein_distance()[1]
+            st.session_state.context.damerau_levenshtein_distance()[1]
         download_dict["levenshtein"] = st.session_state.context.levenshtein_distance()[0]
         download_dict["levenshtein-norm"] = st.session_state.context.levenshtein_distance()[1]
         st.download_button(label="Download with tags",
                            data=json.dumps(download_dict, indent=4, separators=(',', ': ')),
                            file_name="AquDeM_results.json")
+    with about_tab:
+        st.write("Interactive, visual evaluation of activity detection results.")
+        st.write("For more information, please refer to the "
+                 "[documentation](https://sdgs.un.org/goals) "
+                 "or [GitHub repository](https://github.com/ics-unisg/aqudem).")

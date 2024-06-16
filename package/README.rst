@@ -12,7 +12,7 @@ AquDeM
 
 
 
-Activity and Sequence Detection Performance Measures: A package to evaluate activity detection results, including the sequence of events given multiple activity types.
+Activity and Sequence Detection Evaluation Metrics: A Comprehensive Tool for Event Log Comparison.
 
 * Documentation: https://aqudem.readthedocs.io. (TODO: not yet active)
 
@@ -20,7 +20,7 @@ Installation
 ------------
 .. code-block:: bash
 
-    pip install .
+    pip install aqudem
 
 Usage
 -----
@@ -28,15 +28,14 @@ Usage
 
     import aqudem
 
-    aqu_context = aqudem.Context("ground_truth.xes",
-                                 "detected.xes")
+    aqu_context = aqudem.Context("ground_truth_log.xes", "detected_log.xes")
 
-    aqu_context.activity_names
-    aqu_context.case_ids
-    aqu_context.cross_correlation()
-    aqu_context.event_analysis(activity_name="Store Workpiece in HBW", case_id="case1")
-    aqu_context.two_set(activity_name="Store Workpiece in HBW")
-    aqu_context.levenshtein_distance()
+    aqu_context.activity_names # get all activity names present in log
+    aqu_context.case_ids # get all case IDs present in log
+
+    aqu_context.cross_correlation() # aggregate over all cases and activites
+    aqu_context.event_analysis(activity_name="Pack", case_id="1") # filter on case and activity
+    aqu_context.two_set(activity_name="Pack") # filter on activity, aggregate over cases
 
 
 For a more detailed description of the available methods, please refer to the rest of the documentation.
@@ -44,13 +43,13 @@ For a more detailed description of the available methods, please refer to the re
 Preface
 --------
 
-* Measurements and metrics to evaluate activity detection results
+* Metrics to evaluate activity detection results
 * Input: two XES files, one with the ground truth and one with the detection results
 * Output: a set of metrics to evaluate the detection results
 * Prerequisites for the input files: the XES files must...
 
-  * ... have a ``sampling_freq`` in Hz associated with each case
-  * ... have a ``concept:name`` attribute for each case
+  * ... have a ``sampling_freq`` in Hz associated with each case (only detected file)
+  * ... have a ``concept:name`` attribute for each case (case ID)
   * ... have a ``time:timestamp`` attribute for each event
   * ... have an ``concept:name`` attribute for each event (activity name)
   * ... have a ``lifecycle:transition`` attribute for each event
@@ -72,12 +71,13 @@ Available SEQUENCE_METRICs are:
 * Damerau-Levenshtein Distance
 * Levenshtein Distance
 
-For requests that span multiple cases, the results are aggregated. The default and only aggregation method is currently averaging.
 
-Classifications are specified in the docstrings of the public
-metric methods of aqudem.Context.
+All metrics are also available in appropriately normalized versions.
+For requests that span multiple cases, the results are aggregated. The default and only aggregation method is currently the mean.
+For more detailed definitions of the metrics, please refer to the documentation.
 
-Credits
+
+
 -------
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
