@@ -14,7 +14,7 @@ AquDeM
 
 Activity and Sequence Detection Evaluation Metrics: A Comprehensive Tool for Event Log Comparison.
 
-* Documentation: https://aqudem.readthedocs.io. (TODO: not yet active)
+* Documentation: https://aqudem.readthedocs.io
 
 Installation
 ------------
@@ -78,10 +78,4 @@ For more detailed definitions of the metrics, please refer to the documentation.
 
 
 
--------
-
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 .. _`Ward et al. (2011)`: https://doi.org/10.1145/1889681.1889687

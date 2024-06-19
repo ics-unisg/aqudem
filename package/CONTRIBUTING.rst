@@ -108,15 +108,15 @@ Tips
 Deploying
 ---------
 
-
-TODO: to change
-
-A reminder for the maintainers on how to deploy.
-Make sure all your changes are committed (including an entry in HISTORY.rst).
+A reminder for the maintainers on how to deploy. Deployment happens manually.
+Make sure all your changes are committed (including an entry in HISTORY.rst),
+and that the pipelines all pass.
+Modify the relevant fields in setup.cfg and/or aqudem/__init__.py.
 Then run::
 
-$ bump2version patch # possible: major / minor / patch
-$ git push
-$ git push --tags
+$ python3 -m pip install --upgrade build
+$ python3 -m build
+$ python3 -m pip install --upgrade twine
+$ python3 -m twine upload dist/*
 
-Travis will then deploy to PyPI if tests pass.
+
