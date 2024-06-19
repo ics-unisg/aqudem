@@ -6,7 +6,7 @@ from .utils import (XESMissingTraceNameAttribute,XESMissingSamplingFreqError,
                     XESMissingTimestamp, XESMissingActivityName, XESMissingActivityInstance,
                     XESIncorrectLifecycleTransitionError)
 
-__author__ = """Aaron F. Kurz"""
+__author__ = """ICS, Universität St. Gallen"""
 __email__ = 'aaron.kurz@unisg.ch'
 __version__ = '0.1.0'
 
