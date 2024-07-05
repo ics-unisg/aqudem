@@ -59,6 +59,17 @@ def test_all_metrics_have_suitable_dataframes(at: AppTest) -> None:
 
 
 def test_tags_selection_dataframe_exists(at: AppTest) -> None:
-    assert at.tabs[1].dataframe.len == 1
-    assert "Tag Name" in at.tabs[1].dataframe[0].value.columns
-    assert "Tag Value" in at.tabs[1].dataframe[0].value.columns
+    assert at.tabs[2].dataframe.len == 1
+    assert "Tag Name" in at.tabs[2].dataframe[0].value.columns
+    assert "Tag Value" in at.tabs[2].dataframe[0].value.columns
+
+
+def test_timeline_elements_exists(at: AppTest) -> None:
+    assert "timeline" in at.tabs[1].subheader[0].value
+    assert at.tabs[1].radio.len == 1
+    assert at.tabs[1].selectbox.len == 1
+
+
+def test_cases_selection_timeline_tab(at: AppTest) -> None:
+    at.tabs[1].radio[0].set_value("Cases").run(timeout=10)
+    assert at.tabs[1].selectbox.len == 0
