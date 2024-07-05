@@ -6,6 +6,7 @@ from typing import List
 import pandas as pd
 import streamlit as st
 import altair as alt
+import plotly.express as px
 import aqudem
 
 st.set_page_config(
@@ -41,6 +42,61 @@ def get_case_choices():
         "Which cases are you interested in?",
         options=all_cases,
         help="Leave empty to average over all cases")
+
+
+def get_per_activity_log(log_type: str, case: str):
+    """Get a log formatted with activity start and complete times."""
+    if log_type == "ground_truth":
+        log = st.session_state.context.ground_truth
+        activities = st.session_state.context.activity_names["ground_truth"]
+    elif log_type == "detected":
+        log = st.session_state.context.detected
+        activities = st.session_state.context.activity_names["detected"]
+    else:
+        raise ValueError("type must be 'ground_truth' or 'detected'")
+    log = log.loc[log["case:concept:name"] == case]
+    rows = []
+    for activity in activities:
+        activity_log = log.loc[log["concept:name"] == activity]
+        activity_log = activity_log.sort_values("time:timestamp")
+        new_rows = []
+        for i in range(0, len(activity_log) - 1, 2):
+            row = activity_log.iloc[i]
+            next_row = activity_log.iloc[i + 1]
+            if row["lifecycle:transition"] == "start" and next_row[
+                "lifecycle:transition"] == "complete":
+                new_rows.append({
+                    "activity": activity,
+                    "start": row["time:timestamp"],
+                    "complete": next_row["time:timestamp"]
+                })
+            else:
+                raise ValueError(
+                    "Activity instances must be in the format 'start' followed by 'complete'")
+        rows.extend(new_rows)
+    return pd.DataFrame(rows)
+
+
+def get_per_case_log(log_type: str):
+    """Get a log formatted with case start and complete times."""
+    if log_type == "ground_truth":
+        log = st.session_state.context.ground_truth
+    elif log_type == "detected":
+        log = st.session_state.context.detected
+    else:
+        raise ValueError("type must be 'ground_truth' or 'detected'")
+    cases = log["case:concept:name"].unique()
+    rows = []
+    for case in cases:
+        case_log = log.loc[log["case:concept:name"] == case]
+        start = case_log["time:timestamp"].min()
+        complete = case_log["time:timestamp"].max()
+        rows.append({
+            "case": case,
+            "start": start,
+            "complete": complete
+        })
+    return pd.DataFrame(rows)
 
 
 # --------- METRIC CONTENT FUNCTIONS ---------
@@ -432,6 +488,45 @@ def get_event_analysis_rates_content():
         st.altair_chart(chart_n, use_container_width=True)
 
 
+def get_timeline_charts():
+    """Get the charts area for the timeline (similar to Gantt chart)."""
+    category = st.radio("What do you want to visualize?",
+                        options=["Activities", "Cases"])
+    if category == "Cases":
+        source_gt = get_per_case_log("ground_truth")
+        source_det = get_per_case_log("detected")
+        source_gt["log"] = "Ground truth"
+        source_det["log"] = "Detected"
+        source = pd.concat([source_gt, source_det])
+        fig = px.timeline(source, x_start="start", x_end="complete", y="log", color="case",
+                          labels={"case": "Case", "log": "Log"},
+                          category_orders={"log": ["Ground truth", "Detected"]})
+        fig.update_xaxes(title_text="Time")
+        st.subheader("Interactive timeline of cases",
+                     help="You can zoom in and out by selecting the area of interest. "
+                          "Double-click on legend elements to isolate a case.")
+        st.plotly_chart(fig, use_container_width=True)
+    elif category == "Activities":
+        cases_gt = st.session_state.context.case_ids["ground_truth"]
+        cases_det = st.session_state.context.case_ids["detected"]
+        cases = list(set(cases_gt + cases_det))
+        case_choice = st.selectbox("Which case do you want to visualize?",
+                                   options=cases)
+        source_gt = get_per_activity_log("ground_truth", case_choice)
+        source_det = get_per_activity_log("detected", case_choice)
+        source_gt["log"] = "Ground truth"
+        source_det["log"] = "Detected"
+        source = pd.concat([source_gt, source_det])
+        fig = px.timeline(source, x_start="start", x_end="complete", y="log", color="activity",
+                          labels={"activity": "Activity", "log": "Log"},
+                          category_orders={"log": ["Ground truth", "Detected"]})
+        fig.update_xaxes(title_text="Time")
+        st.subheader("Interactive timeline of activities",
+                     help="You can zoom in and out by selecting the area of interest. "
+                          "Double-click on legend elements to isolate an activity.")
+        st.plotly_chart(fig, use_container_width=True)
+
+
 # --------- MAIN FLOW ---------
 
 st.header("AquDeM 📊")
@@ -461,8 +556,9 @@ if not st.session_state.active_analysis and st.session_state.context is None:
                      "and detected logs to start the analysis.",
                      icon="⚠️")
 elif st.session_state.active_analysis and st.session_state.context is not None:
-    interactive_tab, download_tab, about_tab = st.tabs(["Interactive", "Download", "About"])
-    with interactive_tab:
+    metrics_tab, timeline_tab, download_tab, about_tab = st.tabs(
+        ["Metrics", "Timeline", "Download", "About"])
+    with metrics_tab:
         metrics = ["Cross-correlation", "Damerau-Levenshtein", "Levenshtein",
                    "Damerau-Levenshtein normalized", "Levenshtein normalized",
                    "2SET metrics", "2SET rates", "Event analysis", "Event analysis rates"]
@@ -489,6 +585,8 @@ elif st.session_state.active_analysis and st.session_state.context is not None:
             get_event_analysis_metrics_content()
         elif metric_choice == "Event analysis rates":
             get_event_analysis_rates_content()
+    with timeline_tab:
+        get_timeline_charts()
     with download_tab:
         st.write("AquDeM offers the possibility to download the results of the analysis "
                  "of the overall log in "
