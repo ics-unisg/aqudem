@@ -15,8 +15,8 @@ class XESMissingTraceNameAttribute(Error):
     """The trace needs to be named."""
 
 
-class XESMissingSamplingFreqError(Error):
-    """The trace is missing the sampling frequency."""
+class XESSamplingFreqError(Error):
+    """The trace is missing the sampling frequency or there is an inconsistency."""
 
 
 class XESMissingTimestamp(Error):
@@ -44,8 +44,8 @@ def _validate_xes_dataframe_before_processing(xes_ground_truth: sf.FrameHE,
     :returns: None"""
     if ("case:sampling_freq" not in xes_detected.columns
         or xes_detected["case:sampling_freq"].count(unique=True) != 1):
-        raise XESMissingSamplingFreqError("All XES traces in the log must have "
-                                          "a 'sampling_freq' attribute.")
+        raise XESSamplingFreqError("All XES traces in the log must have "
+                                   "a 'sampling_freq' attribute.")
     for xes_frame in [xes_ground_truth, xes_detected]:
         if ("case:concept:name" not in xes_frame.columns
             or xes_frame["case:concept:name"].isna().any()):
@@ -70,6 +70,14 @@ def _validate_xes_dataframe_after_processing(xes_ground_truth: sf.FrameHE,
                                              xes_detected: sf.FrameHE) -> None:
     """ make sure that for each case-activity,
     the "lifecycle:transition" is always first 'start', then 'complete' """
+    # make sure that the sampling frequency is the same for both logs and is never NaN
+    if (set(xes_ground_truth["case:sampling_freq"].unique())
+        != set(xes_detected["case:sampling_freq"].unique())
+        or len(xes_ground_truth["case:sampling_freq"].unique()) > 1
+        or xes_ground_truth["case:sampling_freq"].isna().any()
+        or xes_detected["case:sampling_freq"].isna().any()):
+        raise XESSamplingFreqError("The 'sampling_freq' attribute must have the same value for "
+                                   "both logs and all traces within them.")
     for xes_frame in [xes_ground_truth, xes_detected]:
         for case_id in xes_frame["case:concept:name"].unique():
             case = xes_frame.loc[xes_frame["case:concept:name"] == case_id]
@@ -209,6 +217,10 @@ def _determine_start_end_per_case(gt: sf.FrameHE,
     for case_id in gt["case:concept:name"].unique():
         gt_case = gt.loc[gt["case:concept:name"] == case_id]
         det_case = det.loc[det["case:concept:name"] == case_id]
+        if len(gt_case) == 0 or len(det_case) == 0:
+            raise ValueError(f"Case ID '{case_id}' is not in both logs. "
+                             "Currently, all case IDs must be in both logs. "
+                             "Please clean logs before proceeding.")
         start_time = min(gt_case["time:timestamp"].min(), det_case["time:timestamp"].min())
         end_time = max(gt_case["time:timestamp"].max(), det_case["time:timestamp"].max())
         start_end_dict[case_id] = (start_time, end_time)
@@ -277,6 +289,10 @@ def _generate_activity_metric_list(gt: sf.FrameHE,
                                       det_filtered_by_activity,
                                       start_end_per_case,
                                       sampling_freq))
+    if len(metric_list) == 0:
+        raise ValueError(
+            "No metrics could be calculated for this combination of case ID(s) and activity name("
+            "s).")
     return metric_list
 
 

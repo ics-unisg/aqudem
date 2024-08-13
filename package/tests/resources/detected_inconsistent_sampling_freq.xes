@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<log xes.version="1849-2016" xes.features="nested-attributes" xmlns="http://www.xes-standard.org/">
+	<extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext" />
+	<extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext" />
+	<extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext" />
+	<string key="origin" value="csv" />
+	<trace>
+		<string key="concept:name" value="case1" />
+        <float key="sampling_freq" value="1.0"/>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:07:05.150000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:07:05.150000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:07:07.180000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:07:17.240000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:09:56.180000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:09:56.180000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:10:08.260000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:11:00.510000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:12:33.130000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:13:29.370000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:14:37.970000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:14:46.110000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:14:57.980000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:16:10.310000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:17:20.710000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:17:52.940000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:17:56.970000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:18:09.070000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:20:37.890000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:20:49.950000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:25:59.820000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:26:13.990000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:26:13.990000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:26:16.030000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:26:26.070000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:26:26.070000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:29:03.080000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:29:03.080000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:29:05.090000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:29:15.140000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:53:00.990000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:53:00.990000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:53:13.070000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:53:51.280000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:54:01.340000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:55:47.870000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:55:55.910000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:56:01.960000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:58:06.840000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:58:10.900000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:58:25.130000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:00:13.610000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:00:53.500000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:01:07.690000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:04:05.230000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:04:13.260000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:07:56.740000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:08:04.770000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:08:24.930000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:10:05.380000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:10:19.470000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:12:08.090000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:12:22.140000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:12:30.190000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:12:36.220000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:14:10.800000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:14:30.930000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:16:39.650000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+	</trace>
+    <trace>
+		<string key="concept:name" value="case2" />
+        <float key="sampling_freq" value="1.0"/>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:08:46.900000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:08:53" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:08:53" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:08:59.060000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:08:59.060000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:09:03.100000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:09:07.210000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:09:07.210000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:09:09.250000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:09:19.300000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:11:31.960000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:11:31.960000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:11:31.960000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:11:46.020000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:12:38.290000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:12:38.290000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:14:37.030000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:14:45.070000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:15:41.570000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:15:48.980000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:16:03.040000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:16:11.780000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:16:15.860000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:16:15.860000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:16:17.890000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:16:27.930000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:19:05" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:20:09.310000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:21:19.460000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:21:29.490000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:21:41.980000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:21:54.060000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:23:34.700000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:23:40.540000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:23:48.580000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:23:56.950000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:24:01" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:24:01" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:24:03.010000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:24:13.060000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:26:19.770000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:26:51.950000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:26:56" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:26:56" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:27:08.060000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:27:58.310000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:29:02.790000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:29:02.790000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:29:16.850000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:29:53.070000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:30:03.120000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:31:53.830000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:32:01.870000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:32:07.900000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:35:51.500000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:35:59.530000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:37:10.340000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:37:22.390000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:37:34.200000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:37:46.270000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:40:07.170000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:40:19.240000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:41:59.800000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:42:22" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:42:26.080000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:42:26.080000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:42:28.130000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:42:38.170000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:44:48.940000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:46:01.280000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:47:19.730000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:47:19.730000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:47:19.730000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:47:33.800000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:48:10.090000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:48:10.090000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:50:10.880000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:50:18.900000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:51:04.670000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:51:10.680000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:52:27.850000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:54:30.530000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:54:38.550000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:54:44.590000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:58:40.880000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T14:58:48.920000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T14:59:47.360000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:00:01.470000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T15:00:05.580000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T15:00:05.580000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:00:07.600000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:00:19.660000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T15:01:30.260000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:01:44.420000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T15:01:46.430000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:02:46.750000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T15:03:53.060000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T15:03:53.060000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:04:43.300000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:04:43.300000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T15:04:53.350000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T15:06:42.120000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:06:50.150000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:06:56.190000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T15:08:04.610000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:08:18.670000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T15:08:20.680000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:09:10.960000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T15:09:47.340000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-02-06T15:09:47.340000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:09:59.400000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-02-06T15:10:39.580000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+	</trace>
+</log>

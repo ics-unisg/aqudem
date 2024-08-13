@@ -1,4 +1,4 @@
-pip==24
+pip==24.2
 bump2version==1.0.1
 wheel==0.42.0
 watchdog==4.0.0
@@ -7,7 +7,7 @@ tox==4.12.1
 coverage==7.4.1
 Sphinx==7.2.6
 twine==5.0.0
-pylint~=3.1.0
-pytest~=8.1.1
-setuptools~=69.1.0
-mypy==1.9.0
+pylint~=3.2.6
+pytest~=8.3.2
+setuptools~=72.1.0
+mypy==1.10.0

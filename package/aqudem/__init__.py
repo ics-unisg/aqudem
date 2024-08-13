@@ -2,7 +2,7 @@
 from .aqudem import Context
 from .event_analysis_helper import EventAnalysis
 from .two_set_helper import TwoSet
-from .utils import (XESMissingTraceNameAttribute,XESMissingSamplingFreqError,
+from .utils import (XESMissingTraceNameAttribute, XESSamplingFreqError,
                     XESMissingTimestamp, XESMissingActivityName, XESMissingActivityInstance,
                     XESIncorrectLifecycleTransitionError)
 
@@ -14,7 +14,7 @@ __all__ = ["Context",
            "EventAnalysis",
            "TwoSet",
            "XESMissingTraceNameAttribute",
-           "XESMissingSamplingFreqError",
+           "XESSamplingFreqError",
            "XESMissingTimestamp",
            "XESMissingActivityName",
            "XESMissingActivityInstance",
