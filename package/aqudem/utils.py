@@ -70,14 +70,10 @@ def _validate_xes_dataframe_after_processing(xes_ground_truth: sf.FrameHE,
                                              xes_detected: sf.FrameHE) -> None:
     """ make sure that for each case-activity,
     the "lifecycle:transition" is always first 'start', then 'complete' """
-    # make sure that the sampling frequency is the same for both logs and is never NaN
-    if (set(xes_ground_truth["case:sampling_freq"].unique())
-        != set(xes_detected["case:sampling_freq"].unique())
-        or len(xes_ground_truth["case:sampling_freq"].unique()) > 1
-        or xes_ground_truth["case:sampling_freq"].isna().any()
+    if (len(xes_detected["case:sampling_freq"].unique()) != 1
         or xes_detected["case:sampling_freq"].isna().any()):
         raise XESSamplingFreqError("The 'sampling_freq' attribute must have the same value for "
-                                   "both logs and all traces within them.")
+                                   "all traces in the detected log.")
     for xes_frame in [xes_ground_truth, xes_detected]:
         for case_id in xes_frame["case:concept:name"].unique():
             case = xes_frame.loc[xes_frame["case:concept:name"] == case_id]

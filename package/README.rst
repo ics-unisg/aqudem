@@ -48,12 +48,12 @@ Preface
 * Output: a set of metrics to evaluate the detection results
 * Prerequisites for the input files: the XES files must...
 
-  * ... have a ``sampling_freq`` in Hz associated with each case (only detected file)
-  * ... have a ``concept:name`` attribute for each case (case ID)
+  * ... have a ``sampling_freq`` in Hz associated with each case (only detected file), and each case must have the same sampling frequency
+  * ... have a ``concept:name`` attribute for each case (case ID), with a matching case ID in both files (ground truth and detected)
   * ... have a ``time:timestamp`` attribute for each event
   * ... have an ``concept:name`` attribute for each event (activity name)
   * ... have a ``lifecycle:transition`` attribute for each event
-  * ... each ``start`` event must have a corresponding ``complete`` event; and only these two types of events are relevant for the analysis currently
+  * ... each ``start`` event must have a corresponding ``complete`` event; and only these two types of events are relevant for the analysis currently; activity executions with a duration of exactly zero are removed
 
 
 An ACTIVITY_METRIC is a metric that is calculated for each activity type

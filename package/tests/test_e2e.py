@@ -93,8 +93,8 @@ def test_context_properties_3_20(context: aqudem.Context) -> None:
     assert isinstance(context.ground_truth, sf.FrameHE)
     assert isinstance(context.detected, sf.FrameHE)
     assert context.ground_truth.shape[0] <= 204
-    assert context.ground_truth.shape[1] == 6
-    for column in ["case:concept:name", "case:sampling_freq", "concept:name",
+    assert context.ground_truth.shape[1] == 5
+    for column in ["case:concept:name", "concept:name",
                    "lifecycle:transition", "time:timestamp", "concept:instance"]:
         assert column in context.ground_truth.columns
     assert context.detected.shape[0] <= 78
@@ -120,7 +120,7 @@ def test_context_properties_3_20(context: aqudem.Context) -> None:
 def test_context_properties(context: aqudem.Context) -> None:
     assert isinstance(context.ground_truth, sf.FrameHE)
     assert isinstance(context.detected, sf.FrameHE)
-    for column in ["case:concept:name", "case:sampling_freq", "concept:name",
+    for column in ["case:concept:name", "concept:name",
                    "lifecycle:transition", "time:timestamp", "concept:instance"]:
         assert column in context.ground_truth.columns
     for column in ["case:concept:name", "concept:name", "lifecycle:transition",

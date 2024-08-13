@@ -358,7 +358,7 @@
 	</trace>
     <trace>
 		<string key="concept:name" value="case2" />
-        <float key="sampling_freq" value="1.0"/>
+        <float key="sampling_freq" value="0.5"/>
 		<event>
 			<string key="concept:name" value="Read Color" />
 			<string key="lifecycle:transition" value="start" />

@@ -6,7 +6,6 @@
 	<string key="origin" value="csv" />
 	<trace>
 		<string key="concept:name" value="case1" />
-        <float key="sampling_freq" value="1.0"/>
 		<event>
 			<string key="concept:instance" value="Activity_0sy1do2:863e9432-a096-11ed-855a-2a1b4c3d6e5f" />
 			<string key="concept:name" value="Get Workpiece from Pickup Station" />
@@ -1678,7 +1677,6 @@
 	</trace>
     <trace>
 		<string key="concept:name" value="case2" />
-        <float key="sampling_freq" value="0.5"/>
 		<event>
 			<string key="concept:instance" value="Activity_0sy1do2:599b4c26-a61f-11ed-bd3f-2a1b4c3d6e5f" />
 			<string key="concept:name" value="Get Workpiece from Pickup Station" />

@@ -15,7 +15,6 @@
     <classifier name="Activity" keys="concept:name lifecycle:transition"/>
     <trace>
         <string key="concept:name" value="ExampleTrace1"/>
-        <float key="sampling_freq" value="1.0"/>
         <event>
             <string key="concept:name" value="Activity A"/>
             <string key="concept:instance" value="A-1"/>
