@@ -7,7 +7,7 @@ AquDeM
         :target: https://pypi.python.org/pypi/aqudem
 
 .. image:: https://readthedocs.org/projects/aqudem/badge/?version=latest
-        :target: https://aqudem.readthedocs.io/en/latest/?version=latest
+        :target: https://aqudem.readthedocs.io
         :alt: Documentation Status
 
 
