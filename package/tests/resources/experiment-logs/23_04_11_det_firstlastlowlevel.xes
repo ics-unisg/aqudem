@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<log xes.version="1849-2016" xes.features="nested-attributes" xmlns="http://www.xes-standard.org/">
+	<extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext" />
+	<extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext" />
+	<extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext" />
+	<string key="origin" value="csv" />
+	<trace>
+		<string key="concept:name" value="case1" />
+        <float key="sampling_freq" value="1.0"/>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T10:35:16.310000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T10:35:16.470000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T10:38:08.670000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T10:38:24.450000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T10:43:38.050000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T10:43:52.900000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T10:49:17.930000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T10:49:33.620000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T10:57:13.830000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T10:57:13.980000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T11:07:01.990000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T11:07:25.860000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T11:16:36.260000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T11:16:55.520000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T11:26:19.680000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T11:26:19.820000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T11:28:08.110000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T11:28:18.590000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T11:33:39.800000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T11:34:42.240000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T11:35:48.720000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T11:36:39.160000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T11:39:22.560000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T11:39:53.850000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T11:41:16.310000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T11:41:28.890000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-04-11T11:42:53.460000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+		<event>
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-04-11T11:43:08.330000" />
+			<string key="detection:type" value="FirstLastLowLevelPattern" />
+		</event>
+	</trace>
+</log>

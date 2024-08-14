@@ -50,7 +50,7 @@ class Context:
         self._ground_truth = _remove_events_with_length_zero(base_gt).relabel(sf.IndexAutoFactory)
         self._detected = _remove_events_with_length_zero(base_det).relabel(sf.IndexAutoFactory)
         _validate_xes_dataframe_after_processing(self._ground_truth, self._detected)
-        self._sampling_freq: float = self._ground_truth["case:sampling_freq"].iloc[0]
+        self._sampling_freq: float = self._detected["case:sampling_freq"].iloc[0]
         self._start_end_per_case = _determine_start_end_per_case(self._ground_truth, self._detected)
 
     @property

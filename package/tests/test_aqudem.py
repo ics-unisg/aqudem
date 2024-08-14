@@ -13,8 +13,6 @@ def test_context_creation() -> None:
         assert value in ["Activity A", "Activity B", "Activity C"]
     for value in context._detected["case:sampling_freq"].values:
         assert value == 1.0
-    for value in context._ground_truth["case:sampling_freq"].values:
-        assert value == 1.0
     assert context._ground_truth["case:concept:name"].count(unique=True) == 2
     assert context._detected["case:concept:name"].count(unique=True) == 2
     assert len(context._ground_truth.loc[

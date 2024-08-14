@@ -14,7 +14,8 @@
     </global>
     <classifier name="Activity" keys="concept:name lifecycle:transition"/>
     <trace>
-        <string key="concept:name" value="ExampleTrace1"/>
+        <string key="concept:name" value="ExampleTrace2"/>
+        <float key="sampling_freq" value="1.0"/>
         <event>
             <string key="concept:name" value="Activity A"/>
             <string key="concept:instance" value="A-1"/>
@@ -25,41 +26,17 @@
             <string key="concept:name" value="Activity A"/>
             <string key="concept:instance" value="A-1"/>
             <string key="lifecycle:transition" value="complete"/>
-            <date key="time:timestamp" value="2024-02-15T08:05:00.000+00:00"/>
-        </event>
-        <event>
-            <string key="concept:name" value="Activity C"/>
-            <string key="concept:instance" value="C-1"/>
-            <string key="lifecycle:transition" value="start"/>
-            <date key="time:timestamp" value="2024-02-15T08:20:00.000+00:00"/>
-        </event>
-        <event>
-            <string key="concept:name" value="Activity C"/>
-            <string key="concept:instance" value="C-1"/>
-            <string key="lifecycle:transition" value="complete"/>
-            <date key="time:timestamp" value="2024-02-15T08:24:00.000+00:00"/>
+            <date key="time:timestamp" value="2024-02-15T08:10:00.000+00:00"/>
         </event>
         <event>
             <string key="concept:name" value="Activity B"/>
             <string key="concept:instance" value="B-1"/>
             <string key="lifecycle:transition" value="start"/>
-            <date key="time:timestamp" value="2024-02-15T08:24:00.000+00:00"/>
+            <date key="time:timestamp" value="2024-02-15T08:22:00.000+00:00"/>
         </event>
         <event>
             <string key="concept:name" value="Activity B"/>
             <string key="concept:instance" value="B-1"/>
-            <string key="lifecycle:transition" value="complete"/>
-            <date key="time:timestamp" value="2024-02-15T08:25:00.000+00:00"/>
-        </event>
-        <event>
-            <string key="concept:name" value="Activity B"/>
-            <string key="concept:instance" value="B-2"/>
-            <string key="lifecycle:transition" value="start"/>
-            <date key="time:timestamp" value="2024-02-15T08:25:30.000+00:00"/>
-        </event>
-        <event>
-            <string key="concept:name" value="Activity B"/>
-            <string key="concept:instance" value="B-2"/>
             <string key="lifecycle:transition" value="complete"/>
             <date key="time:timestamp" value="2024-02-15T08:31:00.000+00:00"/>
         </event>
@@ -73,17 +50,29 @@
             <string key="concept:name" value="Activity A"/>
             <string key="concept:instance" value="A-2"/>
             <string key="lifecycle:transition" value="complete"/>
-            <date key="time:timestamp" value="2024-02-15T08:45:00.000+00:00"/>
+            <date key="time:timestamp" value="2024-02-15T08:36:00.000+00:00"/>
         </event>
         <event>
-            <string key="concept:name" value="Activity C"/>
-            <string key="concept:instance" value="C-2"/>
+            <string key="concept:name" value="Activity A"/>
+            <string key="concept:instance" value="A-3"/>
             <string key="lifecycle:transition" value="start"/>
-            <date key="time:timestamp" value="2024-02-15T08:50:00.000+00:00"/>
+            <date key="time:timestamp" value="2024-02-15T08:37:00.000+00:00"/>
+        </event>
+        <event>
+            <string key="concept:name" value="Activity A"/>
+            <string key="concept:instance" value="A-3"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <date key="time:timestamp" value="2024-02-15T08:43:00.000+00:00"/>
         </event>
         <event>
             <string key="concept:name" value="Activity C"/>
-            <string key="concept:instance" value="C-2"/>
+            <string key="concept:instance" value="C-1"/>
+            <string key="lifecycle:transition" value="start"/>
+            <date key="time:timestamp" value="2024-02-15T08:52:00.000+00:00"/>
+        </event>
+        <event>
+            <string key="concept:name" value="Activity C"/>
+            <string key="concept:instance" value="C-1"/>
             <string key="lifecycle:transition" value="complete"/>
             <date key="time:timestamp" value="2024-02-15T08:59:00.000+00:00"/>
         </event>
@@ -92,40 +81,40 @@
         <string key="concept:name" value="ExampleTrace2"/>
         <float key="sampling_freq" value="1.0"/>
         <event>
-            <string key="concept:name" value="Activity A"/>
-            <string key="concept:instance" value="A-1"/>
-            <string key="lifecycle:transition" value="start"/>
-            <date key="time:timestamp" value="2024-02-18T10:02:00.000+00:00"/>
-        </event>
-        <event>
             <string key="concept:name" value="Activity B"/>
             <string key="concept:instance" value="B-1"/>
             <string key="lifecycle:transition" value="start"/>
-            <date key="time:timestamp" value="2024-02-18T10:02:00.000+00:00"/>
+            <date key="time:timestamp" value="2024-02-18T10:01:00.000+00:00"/>
+        </event>
+        <event>
+            <string key="concept:name" value="Activity A"/>
+            <string key="concept:instance" value="A-1"/>
+            <string key="lifecycle:transition" value="start"/>
+            <date key="time:timestamp" value="2024-02-18T10:06:00.000+00:00"/>
         </event>
         <event>
             <string key="concept:name" value="Activity B"/>
             <string key="concept:instance" value="B-1"/>
             <string key="lifecycle:transition" value="complete"/>
-            <date key="time:timestamp" value="2024-02-18T10:03:00.000+00:00"/>
-        </event>
-        <event>
-            <string key="concept:name" value="Activity A"/>
-            <string key="concept:instance" value="A-1"/>
-            <string key="lifecycle:transition" value="complete"/>
-            <date key="time:timestamp" value="2024-02-18T10:04:00.000+00:00"/>
+            <date key="time:timestamp" value="2024-02-18T10:07:00.000+00:00"/>
         </event>
         <event>
             <string key="concept:name" value="Activity B"/>
             <string key="concept:instance" value="B-2"/>
             <string key="lifecycle:transition" value="start"/>
-            <date key="time:timestamp" value="2024-02-18T10:04:00.000+00:00"/>
+            <date key="time:timestamp" value="2024-02-18T10:08:00.000+00:00"/>
         </event>
         <event>
             <string key="concept:name" value="Activity B"/>
             <string key="concept:instance" value="B-2"/>
             <string key="lifecycle:transition" value="complete"/>
-            <date key="time:timestamp" value="2024-02-18T10:10:00.000+00:00"/>
+            <date key="time:timestamp" value="2024-02-18T10:09:00.000+00:00"/>
+        </event>
+        <event>
+            <string key="concept:name" value="Activity A"/>
+            <string key="concept:instance" value="A-1"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <date key="time:timestamp" value="2024-02-18T10:09:00.000+00:00"/>
         </event>
     </trace>
 </log>
