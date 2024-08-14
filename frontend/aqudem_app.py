@@ -566,7 +566,7 @@ elif st.session_state.active_analysis and st.session_state.context is not None:
                                      options=metrics,
                                      help=("For more information on the metrics, please "
                                            "refer to [the metrics overview in "
-                                           "the documentation](https://sdgs.un.org/goals)"))
+                                           "the documentation](https://aqudem.readthedocs.io)"))
         if metric_choice == "Cross-correlation":
             get_cross_correlation_content()
         elif metric_choice == "Damerau-Levenshtein":
@@ -629,5 +629,5 @@ elif st.session_state.active_analysis and st.session_state.context is not None:
     with about_tab:
         st.write("Interactive, visual evaluation of activity detection results.")
         st.write("For more information, please refer to the "
-                 "[documentation](https://sdgs.un.org/goals) "
+                 "[documentation](https://aqudem.readthedocs.io) "
                  "or [GitHub repository](https://github.com/ics-unisg/aqudem).")
