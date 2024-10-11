@@ -71,8 +71,10 @@ class TwoSet:
     @cached_property
     def tpr(self) -> float:
         """Get the True Positive Rate.
-        Ratio of true positives to total positives."""
-        return round(self.tp / self.p if self.p != 0 else 0, 4)
+        Ratio of true positives to total positives.
+
+        Equivalent to recall. Left for compatibility."""
+        return self.recall
 
     @cached_property
     def tnr(self) -> float:
