@@ -141,28 +141,32 @@ class EventAnalysis:
 
     @cached_property
     def true_positives(self) -> Union[int, float]:
-        """Get the number of true event detections."""
+        """Get the number of true/correct event detections."""
         return round(self.correct_events_per_log, 4)
 
     @cached_property
     def false_positives(self) -> Union[int, float]:
-        """Get the number of false event detections."""
+        """Get the number of false (not correct) event detections."""
         result  = round(self.md + self.fmd + self.fd + self.id, 4)
-        assert abs(result - (self.total_det_events - self.correct_events_per_log)) < 0.01
+        if not (abs(result - (self.total_det_events - self.correct_events_per_log)) < 0.01):
+            raise ValueError(f"False positives calculation error. "
+                             f"{BUG_REPORT_CTA}")
         return result
 
     @cached_property
     def false_negatives(self) -> Union[int, float]:
-        """Get the number of false event deletions."""
+        """Get the number of ground truth events that have not been categorized as correct."""
         result = round(self.d + self.f + self.fm + self.m, 4)
-        assert abs(result - (self.total_gt_events - self.correct_events_per_log)) < 0.01
+        if not (abs(result - (self.total_gt_events - self.correct_events_per_log)) < 0.01):
+            raise ValueError(f"False negatives calculation error. "
+                             f"{BUG_REPORT_CTA}")
         return result
 
 
     @cached_property
     def precision(self) -> float:
         """Get the precision.
-        Ratio of true positives to the sum of true positives and false positives."""
+        Ratio of true positives to all positive predictions."""
         return (round(self.true_positives / (self.true_positives + self.false_positives), 4)
                 if self.true_positives + self.false_positives > 0
                 else 0)
@@ -170,7 +174,7 @@ class EventAnalysis:
     @cached_property
     def recall(self) -> float:
         """Get the recall.
-        Ratio of true positives to the sum of true positives and false negatives."""
+        Ratio of true positives to the number of all positives in ground truth."""
         return (round(self.true_positives / (self.true_positives + self.false_negatives), 4)
                 if self.true_positives + self.false_negatives > 0
                 else 0)
