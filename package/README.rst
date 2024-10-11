@@ -35,8 +35,8 @@ Usage
 
     aqu_context.cross_correlation() # aggregate over all cases and activites
     aqu_context.event_analysis(activity_name="Pack", case_id="1") # filter on case and activity
-    aqu_context.two_set(activity_name="Pack") # filter on activity, aggregate over cases
-
+    ts = aqu_context.two_set(activity_name="Pack") # filter on activity, aggregate over cases
+    ts_f1_score = ts.f1 # get the F1 score of the Two Set metric
 
 For a more detailed description of the available methods, please refer to the rest of the documentation.
 
