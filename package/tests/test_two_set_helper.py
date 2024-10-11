@@ -589,3 +589,17 @@ def test_context_two_set_rates_by_activty_case() -> None:
     for field in rate_props:
         summed += getattr(res, field)
     assert abs(summed - 2.0) < 0.001
+
+
+def test_two_set_recall_precision_f1_balacc() -> None:
+    context = aqudem.Context(os.path.join("tests", "resources", "ground_truth.xes"),
+                             os.path.join("tests", "resources", "detected.xes"))
+    res = context.two_set()
+    assert isinstance(res, TwoSet)
+    assert res.tpr == res.recall
+    # merely check that the others do not raise an exception and that they are within
+    # the range [0, 1]
+    assert 0 <= res.recall <= 1
+    assert 0 <= res.precision <= 1
+    assert 0 <= res.f1 <= 1
+    assert 0 <= res.balanced_accuracy <= 1

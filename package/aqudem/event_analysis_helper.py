@@ -148,7 +148,7 @@ class EventAnalysis:
     def false_positives(self) -> Union[int, float]:
         """Get the number of false (not correct) event detections."""
         result  = round(self.md + self.fmd + self.fd + self.id, 4)
-        if not (abs(result - (self.total_det_events - self.correct_events_per_log)) < 0.01):
+        if not abs(result - (self.total_det_events - self.correct_events_per_log)) < 0.01:
             raise ValueError(f"False positives calculation error. "
                              f"{BUG_REPORT_CTA}")
         return result
@@ -157,7 +157,7 @@ class EventAnalysis:
     def false_negatives(self) -> Union[int, float]:
         """Get the number of ground truth events that have not been categorized as correct."""
         result = round(self.d + self.f + self.fm + self.m, 4)
-        if not (abs(result - (self.total_gt_events - self.correct_events_per_log)) < 0.01):
+        if not abs(result - (self.total_gt_events - self.correct_events_per_log)) < 0.01:
             raise ValueError(f"False negatives calculation error. "
                              f"{BUG_REPORT_CTA}")
         return result
