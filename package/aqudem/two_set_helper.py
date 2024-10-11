@@ -44,13 +44,23 @@ class TwoSet:
 
     @cached_property
     def p(self) -> Union[int, float]:
-        """Get total positive frames."""
+        """Get total positive frame number in ground truth."""
         return self.tp + self.d + self.f + self.ua + self.uo
 
     @cached_property
+    def p_det(self) -> Union[int, float]:
+        """Get total positive frame number in detection."""
+        return self.tp + self.i + self.m + self.oa + self.oo
+
+    @cached_property
     def n(self) -> Union[int, float]:
-        """Get total negative frames."""
+        """Get total negative frames in ground truth."""
         return self.tn + self.i + self.m + self.oa + self.oo
+
+    @cached_property
+    def n_det(self) -> Union[int, float]:
+        """Get total negative frames in detection."""
+        return self.tn + self.d + self.f + self.ua + self.uo
 
     @cached_property
     def t(self) -> Union[int, float]:
@@ -117,6 +127,32 @@ class TwoSet:
         """Get the Overfilling Rate (at the end).
         Ratio of overfullings at the end to total negatives."""
         return round(self.oo / self.n if self.n != 0 else 0, 4)
+
+    @cached_property
+    def precision(self) -> float:
+        """Get the precision.
+        Ratio of true positives to total positive detections."""
+        return round(self.tp / self.p_det if self.p_det != 0 else 0, 4)
+
+    @cached_property
+    def recall(self) -> float:
+        """Get the recall.
+        Ratio of true positives to total positives in ground truth."""
+        return round(self.tp / self.p if self.p != 0 else 0, 4)
+
+    @cached_property
+    def f1(self) -> float:
+        """Get the F1 score.
+        Harmonic mean of precision and recall."""
+        return round(2 * (self.precision * self.recall) / (self.precision + self.recall)
+                     if self.precision + self.recall != 0 else 0, 4)
+
+    @cached_property
+    def balanced_accuracy(self) -> float:
+        """Get the balanced accuracy.
+        Average of true positive rate and true negative rate."""
+        return round((self.tpr + self.tnr) / 2, 4)
+
 
 
 # pylint: disable=too-many-arguments, too-many-locals, too-many-branches, too-many-statements

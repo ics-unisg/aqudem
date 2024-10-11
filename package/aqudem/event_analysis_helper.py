@@ -139,6 +139,50 @@ class EventAnalysis:
                 if self.total_det_events > 0
                 else 0)
 
+    @cached_property
+    def true_positives(self) -> Union[int, float]:
+        """Get the number of true event detections."""
+        return round(self.correct_events_per_log, 4)
+
+    @cached_property
+    def false_positives(self) -> Union[int, float]:
+        """Get the number of false event detections."""
+        result  = round(self.md + self.fmd + self.fd + self.id, 4)
+        assert abs(result - (self.total_det_events - self.correct_events_per_log)) < 0.01
+        return result
+
+    @cached_property
+    def false_negatives(self) -> Union[int, float]:
+        """Get the number of false event deletions."""
+        result = round(self.d + self.f + self.fm + self.m, 4)
+        assert abs(result - (self.total_gt_events - self.correct_events_per_log)) < 0.01
+        return result
+
+
+    @cached_property
+    def precision(self) -> float:
+        """Get the precision.
+        Ratio of true positives to the sum of true positives and false positives."""
+        return (round(self.true_positives / (self.true_positives + self.false_positives), 4)
+                if self.true_positives + self.false_positives > 0
+                else 0)
+
+    @cached_property
+    def recall(self) -> float:
+        """Get the recall.
+        Ratio of true positives to the sum of true positives and false negatives."""
+        return (round(self.true_positives / (self.true_positives + self.false_negatives), 4)
+                if self.true_positives + self.false_negatives > 0
+                else 0)
+
+    @cached_property
+    def f1(self) -> float:
+        """Get the F1 score.
+        Harmonic mean of precision and recall."""
+        return (round((2 * self.precision * self.recall) / (self.precision + self.recall), 4)
+                if self.precision + self.recall > 0
+                else 0)
+
 
 @lru_cache
 def _event_analysis(gt: sf.FrameHE,
