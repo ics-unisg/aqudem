@@ -8,7 +8,7 @@ from .utils import (XESMissingTraceNameAttribute, XESSamplingFreqError,
 
 __author__ = """ICS, Universität St. Gallen"""
 __email__ = 'aaron.kurz@unisg.ch'
-__version__ = '0.1.1'
+__version__ = '0.2.0'
 
 __all__ = ["Context",
            "EventAnalysis",

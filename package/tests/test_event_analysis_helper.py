@@ -523,3 +523,15 @@ def test_context_ea_rates_by_activity_case() -> None:
     assert res.fmdr == 0.125
     assert res.fdr == 0.375
     assert res.idr == 0.125
+
+
+def test_ea_recall_precision_f1() -> None:
+    """Test EA rates by activity and case that is exposed in the context class,
+    aggregated by activity and case."""
+    context = aqudem.Context(os.path.join("tests", "resources", "ground_truth.xes"),
+                             os.path.join("tests", "resources", "detected.xes"))
+    res = context.event_analysis()
+    assert isinstance(res, EventAnalysis)
+    assert 0 <= res.recall <= 1
+    assert 0 <= res.precision <= 1
+    assert 0 <= res.f1 <= 1
