@@ -42,10 +42,12 @@ class Context:
 
     def __init__(self, ground_truth: str, detected: str):
         """Initialize the context with the ground truth and detected logs."""
-        base_gt = sf.FrameHE.from_pandas(
-            pm4py.read_xes(ground_truth).sort_values(by="time:timestamp"))
-        base_det = sf.FrameHE.from_pandas(
-            pm4py.read_xes(detected).sort_values(by="time:timestamp"))
+        det_df = pm4py.read_xes(detected)
+        gt_df = pm4py.read_xes(ground_truth)
+        if det_df.empty or gt_df.empty:
+            raise ValueError("One or more of logs is/are empty. Currently not supported.")
+        base_gt = sf.FrameHE.from_pandas(gt_df.sort_values(by="time:timestamp"))
+        base_det = sf.FrameHE.from_pandas(det_df.sort_values(by="time:timestamp"))
         _validate_xes_dataframe_before_processing(base_gt, base_det)
         self._ground_truth = _remove_events_with_length_zero(base_gt).relabel(sf.IndexAutoFactory)
         self._detected = _remove_events_with_length_zero(base_det).relabel(sf.IndexAutoFactory)

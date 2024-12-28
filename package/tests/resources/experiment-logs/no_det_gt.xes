@@ -1,0 +1,1678 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<log xes.version="1849-2016" xes.features="nested-attributes" xmlns="http://www.xes-standard.org/">
+	<extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext" />
+	<extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext" />
+	<extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext" />
+	<string key="origin" value="csv" />
+	<trace>
+		<string key="concept:name" value="DefaultCase" />
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:863e9432-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:06:27" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:863e9432-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:06:52" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:94dec7d7-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:06:52" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:94dec7d7-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:06:53" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:94dd1a26-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:06:52" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:94dd1a26-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:06:52" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:94daa923-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:06:52" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:94daa923-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:06:52" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:95700b58-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:06:53" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:95700b58-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:07:16" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:a37f97b9-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:07:16" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:a37f97b9-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:08:14" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:c5d962ae-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:08:14" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:c5d962ae-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:08:24" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:e4703232-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:09:05" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:e4703232-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:09:30" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:f2f89816-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:09:30" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:f2f89816-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:09:43" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:f2f5b1e3-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:09:30" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:f2f5b1e3-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:09:30" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:fafdf827-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:09:43" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:fafdf827-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:09:44" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:fb84b458-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:09:44" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:fb84b458-a096-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:10:07" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:09974df9-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:10:07" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:09974df9-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:10:57" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:26eaa0fa-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:10:57" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:26eaa0fa-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:11:07" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:445329ae-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:11:46" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:445329ae-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:12:10" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:52e9e772-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:12:10" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:52e9e772-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:12:20" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:52e7c48f-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:12:10" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:52e7c48f-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:12:10" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:58c19213-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:12:20" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:58c19213-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:12:21" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:594da574-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:12:21" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:594da574-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:12:45" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:676f8155-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:12:45" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:676f8155-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:13:26" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:7ff4d186-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:13:26" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:7ff4d186-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:13:37" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:9d021ade-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:14:15" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:9d021ade-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:14:39" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:ab98d8a2-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:14:39" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:ab98d8a2-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:14:45" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:ab96b5bf-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:14:39" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:ab96b5bf-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:14:39" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:af28b623-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:14:45" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:af28b623-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:14:46" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:afb9f9a4-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:14:46" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:afb9f9a4-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:15:10" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:bdc3e0c1-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:15:10" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:bdc3e0c1-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:16:07" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:dfc8ade2-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:16:07" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:dfc8ade2-a097-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:16:17" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:009e70e6-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:17:02" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:009e70e6-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:17:27" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:0f5009aa-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:17:27" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:0f5009aa-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:17:43" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:0f4cd557-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:17:27" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:0f4cd557-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:17:27" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:18fe37bb-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:17:43" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:18fe37bb-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:17:44" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:198eb7ec-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:17:44" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:198eb7ec-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:18:07" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:2782cd0d-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:18:07" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:2782cd0d-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:18:56" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:44c46cce-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:18:56" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:44c46cce-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:19:07" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:62cbcd92-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:19:47" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:62cbcd92-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:20:11" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:7174b3c6-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:20:11" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:7174b3c6-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:20:24" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:7172b7f3-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:20:11" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:7172b7f3-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:20:11" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:78e6d487-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:20:24" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:78e6d487-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:20:25" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:79790268-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:20:25" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:79790268-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:20:48" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:8771d279-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:20:48" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:8771d279-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:21:29" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:a00d1baa-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:21:29" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:a00d1baa-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:21:40" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:bdac1dae-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:22:19" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:bdac1dae-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:22:43" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:cc36f492-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:22:43" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:cc36f492-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:22:52" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:cc34f8bf-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:22:43" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:cc34f8bf-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:22:43" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:d1636b13-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:22:52" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:d1636b13-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:22:53" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:d1f08fe4-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:22:53" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:d1f08fe4-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:23:17" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:dffa76f5-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:23:17" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:dffa76f5-a098-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:24:14" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:0248a926-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:24:14" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:0248a926-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:24:25" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:27756a3e-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:25:17" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:27756a3e-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:25:41" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:35fbad42-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:25:41" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:35fbad42-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:26:00" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:35f851df-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:25:41" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:35f851df-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:25:41" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:416e95c3-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:26:00" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:416e95c3-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:26:01" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:41fa5b04-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:26:01" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:41fa5b04-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:26:24" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:4fdedfc5-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:26:24" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:4fdedfc5-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:27:15" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:6dc43996-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:27:15" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:6dc43996-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:27:25" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:8e95b6da-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:28:10" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0sy1do2:8e95b6da-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Get Workpiece from Pickup Station" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:28:34" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:9d1e43ce-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:28:34" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1auyxwx:9d1e43ce-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:28:49" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:9d1c20eb-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:28:34" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1og4zsv:9d1c20eb-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Read Color" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:28:34" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:a654349f-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:28:49" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0lzthoo:a654349f-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:28:50" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:a6e4dbe0-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:28:50" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0axsfov:a6e4dbe0-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Move to DPS" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:29:13" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:b4aadc21-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:29:13" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0ek8idg:b4aadc21-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Store Workpiece in HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:29:55" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:cda53542-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:29:55" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1avu0l6:cda53542-a099-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:30:06" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:1a8b123d-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:39:14" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:1a8b123d-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:39:14" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:1a8e4694-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:39:14" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:1a8e4694-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:39:14" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:1a92da7b-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:39:14" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:1a92da7b-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:39:54" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:32b681b2-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:39:54" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:32b681b2-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:40:26" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:459437f9-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:40:26" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:459437f9-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:40:32" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:48f64ec0-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:40:32" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:48f64ec0-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:40:59" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:596e0187-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:40:59" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:596e0187-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:41:34" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:6e235dfe-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:41:34" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:6e235dfe-a09b-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:41:45" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:0730ed7d-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:53:00" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:0730ed7d-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:53:00" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:07346ff4-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:53:00" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:07346ff4-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:53:00" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:07377d3b-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:53:00" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:07377d3b-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:53:41" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:1f70d052-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:53:41" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:1f70d052-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:54:13" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:32300219-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:54:13" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:32300219-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:54:18" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:35928e10-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:54:18" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:35928e10-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:54:46" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:4605d407-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:54:46" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:4605d407-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:55:21" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:5b08db4e-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:55:21" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:5b08db4e-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:55:32" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_147au71:61aadad5-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:55:32" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_147au71:61aadad5-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:55:48" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cwptph:6ad66b6e-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:55:48" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cwptph:6ad66b6e-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:56:23" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:8bfff3d1-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:56:43" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:8bfff3d1-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:56:49" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:8f8c9d08-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:56:49" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:8f8c9d08-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:56:51" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:908024cf-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:56:51" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:908024cf-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:57:47" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:b1fed206-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:57:47" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:b1fed206-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:58:19" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:c4d8699d-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:58:19" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:c4d8699d-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:58:24" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:c83a0b34-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:58:24" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:c83a0b34-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:58:52" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:d8a1433b-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:58:52" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:d8a1433b-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:59:27" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:ed6b3922-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:59:27" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:ed6b3922-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:59:38" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_147au71:f3f9b0a9-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:59:38" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_147au71:f3f9b0a9-a09d-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T13:59:59" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cwptph:008cd642-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T13:59:59" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cwptph:008cd642-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:00:35" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:21298701-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:00:54" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:21298701-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:01:07" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:293353e8-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:01:07" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:293353e8-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:01:09" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:2a2b487f-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:01:09" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:2a2b487f-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:01:58" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:475345c6-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:01:58" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:475345c6-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:02:29" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:5a39125d-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:02:29" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:5a39125d-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:02:35" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:5d9fe414-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:02:35" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:5d9fe414-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:03:02" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:6e060aab-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:03:02" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:6e060aab-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:03:37" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:82e36182-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:03:37" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:82e36182-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:03:48" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_147au71:897386b9-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:03:48" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_147au71:897386b9-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:04:07" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cwptph:9443edb2-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:04:07" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cwptph:9443edb2-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:04:42" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:b33f2465-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:04:59" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:b33f2465-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:05:08" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:b9187cbc-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:05:08" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:b9187cbc-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:05:10" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:ba0c52a3-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:05:10" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:ba0c52a3-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:05:51" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:d256478a-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:05:51" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:d256478a-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:06:22" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:e51181b1-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:06:22" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:e51181b1-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:06:28" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:e879da08-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:06:28" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:e879da08-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:06:55" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:f8e816ef-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:06:55" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:f8e816ef-a09e-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:07:30" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:0d621816-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:07:30" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:0d621816-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:07:41" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_147au71:13eda96d-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:07:41" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_147au71:13eda96d-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:07:56" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cwptph:1d494ab6-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:07:56" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cwptph:1d494ab6-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:08:32" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:3e366659-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:08:52" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:3e366659-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:09:00" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:43606be0-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:09:00" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:43606be0-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:09:02" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:4459e717-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:09:02" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:4459e717-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:09:58" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:65ea207e-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:09:58" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:65ea207e-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:10:30" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:78cbce65-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:10:30" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:78cbce65-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:10:36" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:7c3203dc-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:10:36" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:7c3203dc-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:11:03" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:8ca65b43-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:11:03" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:8ca65b43-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:11:38" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:a18ba15a-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:11:38" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:a18ba15a-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:11:49" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_147au71:a8197ca1-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:11:49" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_147au71:a8197ca1-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:12:08" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cwptph:b313649a-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:12:08" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cwptph:b313649a-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:12:43" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:d44b1dcd-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:13:04" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:d44b1dcd-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:13:20" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:ddec2b84-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:13:20" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:ddec2b84-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:13:21" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:dee642fb-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:13:21" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:dee642fb-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:14:10" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:fc073b62-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:14:10" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:fc073b62-a09f-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:14:42" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:0eba5f39-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:14:42" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:0eba5f39-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:14:47" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:121fd160-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:14:47" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:121fd160-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:15:15" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:228a8be3-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:15:15" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:228a8be3-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:15:49" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:37218aea-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:15:49" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:37218aea-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:16:00" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_147au71:3dadb881-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:16:00" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_147au71:3dadb881-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Sorting Machine sort" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:16:25" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cwptph:4c3756ea-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:16:25" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cwptph:4c3756ea-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to sink" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:17:02" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:6d9c61ad-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:17:21" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0aprosy:6d9c61ad-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:17:33" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:750cd4c4-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:17:33" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0cr4src:750cd4c4-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:17:35" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:7600f8cb-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:17:35" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1lx6ugd:7600f8cb-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Unload from HBW" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:18:16" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:8ebee532-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:18:16" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_107pam0:8ebee532-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Pickup and transport to Oven" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:18:48" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:a18b5d69-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:18:48" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0jtoxii:a18b5d69-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Calibrate VGR" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:18:54" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:a4ee85a0-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:18:54" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_1e6xoye:a4ee85a0-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="OV Burn" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:19:21" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:b5612f57-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:19:21" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_075b7q0:b5612f57-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="WT Transport" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:19:55" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:c9ccb18e-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2023-01-30T14:19:55" />
+		</event>
+		<event>
+			<string key="concept:instance" value="Activity_0kh9pn6:c9ccb18e-a0a0-11ed-855a-2a1b4c3d6e5f" />
+			<string key="concept:name" value="Start Milling Machine" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2023-01-30T14:20:06" />
+		</event>
+	</trace>
+</log>

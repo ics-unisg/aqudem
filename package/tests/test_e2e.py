@@ -318,3 +318,10 @@ def test_no_duration_activities_removed(context: aqudem.Context) -> None:
     with pytest.raises(ValueError) as e:
         context.cross_correlation(activity_name="Read Color")
     assert "The activity name 'Read Color' is not in the event logs." in str(e)
+
+def test_empty_det_log() -> None:
+    """ Test that empty detected raises a ValueError on context creation. """
+    with pytest.raises(ValueError) as e:
+        aqudem.Context(os.path.join("tests", "resources", "experiment-logs", "no_det_gt.xes"),
+                       os.path.join("tests", "resources", "experiment-logs", "no_det_det.xes"))
+    assert "empty" in str(e)
