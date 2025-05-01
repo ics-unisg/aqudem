@@ -101,6 +101,7 @@ def get_per_case_log(log_type: str):
 
 # --------- METRIC CONTENT FUNCTIONS ---------
 
+#pylint: disable=used-before-assignment
 def get_cross_correlation_content():
     """Get the content for the cross-correlation metric."""
     case_choices = get_case_choices()
@@ -298,6 +299,10 @@ def get_2set_rates_content():
         metric_res_2set["mr"] = metric_res_2set["2SET"].apply(lambda x: x.mr)
         metric_res_2set["oar"] = metric_res_2set["2SET"].apply(lambda x: x.oar)
         metric_res_2set["oor"] = metric_res_2set["2SET"].apply(lambda x: x.oor)
+        metric_res_2set["prec"] = metric_res_2set["2SET"].apply(lambda x: x.precision)
+        metric_res_2set["rec"] = metric_res_2set["2SET"].apply(lambda x: x.recall)
+        metric_res_2set["f1"] = metric_res_2set["2SET"].apply(lambda x: x.f1)
+        metric_res_2set["balacc"] = metric_res_2set["2SET"].apply(lambda x: x.balanced_accuracy)
         metric_res_2set.drop(columns=["2SET"], inplace=True)
         st.dataframe(metric_res_2set, use_container_width=True)
         with st.expander("Explanation of acronyms"):
@@ -318,6 +323,11 @@ def get_2set_rates_content():
                 "- mr: Mergings\n"
                 "- oar: Overfills $\\alpha$\n"
                 "- oor: Overfills $\\omega$\n\n"
+                "Furthermore, the following overview metrics are supported:\n"
+                "- prec: Precision\n"
+                "- rec: Recall\n"
+                "- f1: F1 Score\n"
+                "- balacc: Balanced Accuracy\n\n"
                 "For more details, please see the [paper by Ward et al "
                 "(2011)](https://doi.org/10.1145/1889681.1889687).")
         pie_chart_dict_p = {
@@ -435,6 +445,9 @@ def get_event_analysis_rates_content():
         metric_res["fdr"] = metric_res["event-analysis"].apply(lambda x: x.fdr)
         metric_res["idr"] = metric_res["event-analysis"].apply(lambda x: x.idr)
         metric_res["cr_det"] = metric_res["event-analysis"].apply(lambda x: x.cr_det)
+        metric_res["prec"] = metric_res["event-analysis"].apply(lambda x: x.precision)
+        metric_res["rec"] = metric_res["event-analysis"].apply(lambda x: x.recall)
+        metric_res["f1"] = metric_res["event-analysis"].apply(lambda x: x.f1)
         metric_res.drop(columns=["event-analysis"], inplace=True)
         st.dataframe(metric_res, use_container_width=True)
         with st.expander("Explanation of acronyms"):
@@ -452,6 +465,10 @@ def get_event_analysis_rates_content():
                         "- fdr: Fragmentations\n"
                         "- idr: Insertions\n"
                         "- cr_det: Correct detections\n\n"
+                        "Furthermore, the following overview metrics are supported:\n"
+                        "- prec: Precision\n"
+                        "- rec: Recall\n"
+                        "- f1: F1 Score\n\n"
                         "For more details, please see the "
                         "[paper by Ward et al (2011)](https://doi.org/10.1145/1889681.1889687).")
         pie_chart_dict_p = {
