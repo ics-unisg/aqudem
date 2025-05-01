@@ -1,6 +1,6 @@
-pm4py~=2.7.11.12
-textdistance~=4.6.3
-typing-extensions~=4.12.2
-numpy~=2.0.1
-matplotlib~=3.9.2
-static-frame~=2.10.3
+pm4py~=2.7.15.1
+textdistance~=4.6.3 
+typing-extensions~=4.13.2 
+numpy~=2.2.5
+matplotlib~=3.10.1
+static-frame~=2.18.1

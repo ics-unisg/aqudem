@@ -2,6 +2,12 @@
 History
 =======
 
+0.2.1 (2025-05-01)
+------------------
+
+Resolved some dependency issues (by updating all requirements to newest version).
+
+
 0.2.0 (2024-10-11)
 ------------------
 
