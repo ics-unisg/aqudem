@@ -223,7 +223,7 @@ def _determine_start_end_per_case(gt: sf.FrameHE,
     return sf.SeriesHE.from_dict(start_end_dict)
 
 
-# pylint: disable=too-many-arguments, too-many-locals
+# pylint: disable=too-many-positional-arguments, too-many-arguments, too-many-locals
 def _generate_activity_metric_list(gt: sf.FrameHE,
                                    det: sf.FrameHE,
                                    case_id: str,

@@ -129,7 +129,7 @@ def _generate_segment_scores(ground_truth: sf.FrameHE,
         return sf.FrameHE(columns=["start", "end", "type"])
     # Filter the logs to only contain the start and complete events
     ground_truth_filtered: sf.FrameHE = ground_truth.loc[
-        ground_truth["lifecycle:transition"].isin(["start", "complete"])] # type: ignore
+        ground_truth["lifecycle:transition"].isin(["start", "complete"])]
     detected_filtered = detected.loc[detected["lifecycle:transition"].isin(["start", "complete"])]
     # merge the logs and extract list so that
     # every start and complete event are turned into a boundary
@@ -160,7 +160,7 @@ def _generate_segment_scores(ground_truth: sf.FrameHE,
         # get the middle timestamp of the segment
         middle = start + (end - start) / 2
         gt_is_active = _is_during_activity_exec(ground_truth_filtered, middle)
-        det_is_active = _is_during_activity_exec(detected_filtered, middle) # type: ignore
+        det_is_active = _is_during_activity_exec(detected_filtered, middle)
         segment_type = FOUR_TYPE_MAPPING_GT_DET[(gt_is_active, det_is_active)]
         # append the segment to the segment_scores DataFrame
         prior_type = current_type

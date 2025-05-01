@@ -232,6 +232,7 @@ def _two_set(gt: sf.FrameHE,
     return TwoSet(tp=tp, tn=tn, d=d, f=f, ua=ua, uo=uo, i=i, m=m, oa=oa, oo=oo)
 
 
+# pylint: disable=too-many-positional-arguments
 def _two_set_by_activity_case(gt: sf.FrameHE,
                               det: sf.FrameHE,
                               sampling_freq: float,

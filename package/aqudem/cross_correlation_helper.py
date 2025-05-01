@@ -7,7 +7,7 @@ import numpy as np
 from .utils import _generate_activity_metric_list
 
 
-# pylint: disable=too-many-arguments
+# pylint: disable=too-many-positional-arguments, too-many-arguments
 def _cross_correlation_by_activity_case(ground_truth: sf.FrameHE,
                                         detected: sf.FrameHE,
                                         sampling_freq: float,
