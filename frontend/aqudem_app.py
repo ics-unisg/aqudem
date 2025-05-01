@@ -468,8 +468,7 @@ def get_event_analysis_rates_content():
                         "Furthermore, the following overview metrics are supported:\n"
                         "- prec: Precision\n"
                         "- rec: Recall\n"
-                        "- f1: F1 Score\n"
-                        "- balacc: Balanced Accuracy\n\n"
+                        "- f1: F1 Score\n\n"
                         "For more details, please see the "
                         "[paper by Ward et al (2011)](https://doi.org/10.1145/1889681.1889687).")
         pie_chart_dict_p = {
