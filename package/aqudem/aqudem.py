@@ -137,6 +137,10 @@ class Context:
         activity recognition,” ACM Trans. Intell. Syst. Technol., vol. 2, no. 1, pp. 1–23,
         Jan. 2011, doi: 10.1145/1889681.1889687.; 4.1.2
 
+        The aggregation over multiple case-activity pairs works by first summing up the 
+        absolutes and then calculating rates and other metrics on that,
+        which is called micro-averaging.
+
         :param activity_name: The name of the activity to calculate the two-set metrics for.
             If "*" is passed, the two-set metrics will be calculated
             and aggregated for all activities.
@@ -171,6 +175,10 @@ class Context:
         J. A. Ward, P. Lukowicz, and H. W. Gellersen, “Performance metrics for
         activity recognition,” ACM Trans. Intell. Syst. Technol., vol. 2, no. 1, pp. 1–23,
         Jan. 2011, doi: 10.1145/1889681.1889687.; 4.2
+
+        The aggregation over multiple case-activity pairs works by first summing up the 
+        absolutes and then calculating rates and other metrics on that,
+        which is called micro-averaging.
 
         :param activity_name: The name of the activity to calculate the event analysis metrics for.
             If "*" is passed, the metrics will be calculated

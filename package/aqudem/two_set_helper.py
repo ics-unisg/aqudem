@@ -240,7 +240,10 @@ def _two_set_by_activity_case(gt: sf.FrameHE,
                               case_id: str,
                               start_end_per_case: sf.SeriesHE[sf.Index[np.str_], Any]) \
                                 -> TwoSet:
-    """Calculate the absolute 2SET metrics for a given activity and case.
+    """Calculate the 2SET metrics for a given activity and case.
+
+    If both the activity and case id is given as "*", the 2SET metrics will 
+    be calculated and summed up for all activity-case pairs.
 
     :param gt: The ground truth log.
     :param det: The detected log.
@@ -251,7 +254,7 @@ def _two_set_by_activity_case(gt: sf.FrameHE,
         If "*" is passed, the 2SET metrics will be calculated
         and averaged for all cases.
     :param start_end_per_case: The start and end times for each case.
-    :return: The absolute 2SET metrics.
+    :return: The 2SET metrics.
     """
     two_set_metrics = _generate_activity_metric_list(gt=gt,
                                                      det=det,
@@ -260,7 +263,7 @@ def _two_set_by_activity_case(gt: sf.FrameHE,
                                                      activity_name=activity_name,
                                                      start_end_per_case=start_end_per_case,
                                                      metric=_two_set)
-    avg_two_set_dict: Dict[str, Union[float, int]] = {
+    sum_two_set_dict: Dict[str, Union[float, int]] = {
         "tp": 0,
         "tn": 0,
         "d": 0,
@@ -274,8 +277,5 @@ def _two_set_by_activity_case(gt: sf.FrameHE,
     }
     for two_set_metr in two_set_metrics:
         for field in fields(TwoSet):
-            avg_two_set_dict[field.name] += getattr(two_set_metr, field.name)
-    for field in fields(TwoSet):
-        avg_two_set_dict[field.name] = round(avg_two_set_dict[field.name]
-                                             / len(two_set_metrics), 4)
-    return TwoSet(**avg_two_set_dict)
+            sum_two_set_dict[field.name] += getattr(two_set_metr, field.name)
+    return TwoSet(**sum_two_set_dict)

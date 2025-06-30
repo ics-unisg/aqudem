@@ -360,16 +360,19 @@ def _event_analysis_by_activity_case(gt: sf.FrameHE,
                                      start_end_per_case: \
                                         sf.SeriesHE[sf.Index[np.str_], Any]) \
                                             -> EventAnalysis:
-    """Calculate the absolute EA metrics for a given activity and case id.
+    """Calculate the EA metrics for a given activity and case id.
+
+    If both the activity and case id is given as "*", the EA metrics will 
+    be calculated and summed up for all activity-case pairs.
 
     :param sf.FrameHE gt: The ground truth event log.
     :param sf.FrameHE det: The detected event log.
     :param str activity: The activity name.
-        If "*" is passed, the EA rates will be calculated and averaged for all activities.
+        If "*" is passed, the EA metrics will be calculated and summed up for all activities.
     :param str case_id: The case id.
-        If "*" is passed, the EA rates will be calculated and averaged for all cases.
+        If "*" is passed, the EA metrics will be calculated and summed up for all cases.
     :param start_end_per_case: The start and end times of the cases.
-    :return: The absolute EA metrics.
+    :return: The EA metrics.
     """
     all_metrics = _generate_activity_metric_list(gt=gt,
                                                  det=det,
@@ -377,7 +380,7 @@ def _event_analysis_by_activity_case(gt: sf.FrameHE,
                                                  activity_name=activity,
                                                  start_end_per_case=start_end_per_case,
                                                  metric=_event_analysis)
-    avg_ea_dict: Dict[str, Union[float, int]]= {
+    sum_ea_dict: Dict[str, Union[float, int]] = {
         "d": 0,
         "f": 0,
         "fm": 0,
@@ -390,7 +393,6 @@ def _event_analysis_by_activity_case(gt: sf.FrameHE,
     }
     for ea_metr in all_metrics:
         for field in fields(EventAnalysis):
-            avg_ea_dict[field.name] += + getattr(ea_metr, field.name)
-    for field in fields(EventAnalysis):
-        avg_ea_dict[field.name] = round(avg_ea_dict[field.name] / len(all_metrics), 4)
-    return EventAnalysis(**avg_ea_dict)
+            sum_ea_dict[field.name] += getattr(ea_metr, field.name)
+
+    return EventAnalysis(**sum_ea_dict)

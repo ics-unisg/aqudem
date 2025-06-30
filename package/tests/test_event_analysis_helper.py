@@ -121,16 +121,16 @@ def test_event_analysis_by_activity() -> None:
                                               start_end_series_mixed_activity)
     assert isinstance(result, EventAnalysis)
     assert result.d == 0
-    assert result.f == 1.5
+    assert result.f == 3
     assert result.fm == 0
     assert result.m == 0
-    assert result.c == 3
+    assert result.c == 6
     assert result.md == 0
     assert result.fmd == 0
-    assert result.fd == 3
-    assert result.id == 0.5
-    assert result.total_gt_events == 3
-    assert result.total_det_events == 5
+    assert result.fd == 6
+    assert result.id == 1
+    assert result.total_gt_events == 6
+    assert result.total_det_events == 10
 
 
 def test_event_analysis_rates_by_activity() -> None:
@@ -183,16 +183,16 @@ def test_event_analysis_by_activity_case() -> None:
                                               start_end_series_mixed_case)
     assert isinstance(result, EventAnalysis)
     assert result.d == 0
-    assert result.f == 1.5
+    assert result.f == 3
     assert result.fm == 0
     assert result.m == 0
-    assert result.c == 3
+    assert result.c == 6
     assert result.md == 0
     assert result.fmd == 0
-    assert result.fd == 3
-    assert result.id == 0.5
-    assert result.total_gt_events == 3
-    assert result.total_det_events == 5
+    assert result.fd == 6
+    assert result.id == 1
+    assert result.total_gt_events == 6
+    assert result.total_det_events == 10
 
 
 def test_event_analysis_rates_by_activity_case() -> None:
@@ -406,30 +406,30 @@ def test_context_ea_by_activity() -> None:
                              os.path.join("tests", "resources", "detected.xes"))
     res = context.event_analysis(activity_name="Activity A")
     assert isinstance(res, EventAnalysis)
-    assert res.d == round((0 + 1) / 2, 4)
-    assert res.f == round((1 + 0) / 2, 4)
-    assert res.fm == round((0 + 0) / 2, 4)
-    assert res.m == round((0 + 0) / 2, 4)
-    assert res.c == round((2 + 0) / 2, 4)
-    assert res.md == round((0 + 0) / 2, 4)
-    assert res.fmd == round((0 + 0) / 2, 4)
-    assert res.fd == round((2 + 0) / 2, 4)
-    assert res.id == round((0 + 1) / 2, 4)
-    assert res.total_gt_events == 1.5
-    assert res.total_det_events == 2
+    assert res.d == (0 + 1)
+    assert res.f == (1 + 0)
+    assert res.fm == (0 + 0)
+    assert res.m == (0 + 0)
+    assert res.c == (2 + 0)
+    assert res.md == (0 + 0)
+    assert res.fmd == (0 + 0)
+    assert res.fd == (2 + 0)
+    assert res.id == (0 + 1)
+    assert res.total_gt_events == 3
+    assert res.total_det_events == 4
     res = context.event_analysis(activity_name="Activity B")
     assert isinstance(res, EventAnalysis)
-    assert res.d == round((0 + 0) / 2, 4)
-    assert res.f == round((0 + 0) / 2, 4)
-    assert res.fm == round((0 + 1) / 2, 4)
-    assert res.m == round((2 + 1) / 2, 4)
-    assert res.c == round((0 + 0) / 2, 4)
-    assert res.md == round((0 + 1) / 2, 4)
-    assert res.fmd == round((0 + 1) / 2, 4)
-    assert res.fd == round((0 + 1) / 2, 4)
-    assert res.id == round((0 + 0) / 2, 4)
-    assert res.total_gt_events == 2
-    assert res.total_det_events == 1.5
+    assert res.d == (0 + 0)
+    assert res.f == (0 + 0)
+    assert res.fm == (0 + 1)
+    assert res.m == (2 + 1)
+    assert res.c == (0 + 0)
+    assert res.md == (0 + 1)
+    assert res.fmd == (0 + 1)
+    assert res.fd == (0 + 1)
+    assert res.id == (0 + 0)
+    assert res.total_gt_events == 4
+    assert res.total_det_events == 3
     res = context.event_analysis(activity_name="Activity C")
     assert isinstance(res, EventAnalysis)
     assert res.d == 1
@@ -451,17 +451,17 @@ def test_context_ea_by_activity_case() -> None:
                              os.path.join("tests", "resources", "detected.xes"))
     res = context.event_analysis()
     assert isinstance(res, EventAnalysis)
-    assert res.d == round((0 + 0 + 1 + 1 + 0) / 5, 4)
-    assert res.f == round((1 + 0 + 0 + 0 + 0) / 5, 4)
-    assert res.fm == round((0 + 0 + 0 + 0 + 1) / 5, 4)
-    assert res.m == round((0 + 2 + 0 + 0 + 1) / 5, 4)
-    assert res.c == round((2 + 0 + 2 + 0 + 0) / 5, 4)
-    assert res.md == round((0 + 1 + 0 + 0 + 0) / 5, 4)
-    assert res.fmd == round((0 + 0 + 0 + 0 + 1) / 5, 4)
-    assert res.fd == round((2 + 0 + 0 + 0 + 1) / 5, 4)
-    assert res.id == round((0 + 0 + 0 + 0 + 1) / 5, 4)
-    assert res.total_gt_events == 1.8
-    assert res.total_det_events == 1.6
+    assert res.d == (0 + 0 + 1 + 1 + 0)
+    assert res.f == (1 + 0 + 0 + 0 + 0)
+    assert res.fm == (0 + 0 + 0 + 0 + 1)
+    assert res.m == (0 + 2 + 0 + 0 + 1)
+    assert res.c == (2 + 0 + 2 + 0 + 0)
+    assert res.md == (0 + 1 + 0 + 0 + 0)
+    assert res.fmd == (0 + 0 + 0 + 0 + 1)
+    assert res.fd == (2 + 0 + 0 + 0 + 1)
+    assert res.id == (0 + 0 + 0 + 0 + 1)
+    assert res.total_gt_events == 9
+    assert res.total_det_events == 8
 
 
 def test_context_ea_rates_by_activity() -> None:
